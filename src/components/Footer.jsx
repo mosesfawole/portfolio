@@ -1,14 +1,17 @@
-import React from "react";
 import { FaGithub, FaTwitter } from "react-icons/fa";
+import Avi from "../image/Banner.jpg";
 const Footer = () => {
   return (
-    <div className="text-white flex items-center space-x-4 p-4">
+    <div className="text-white flex items-center text-sm space-x-4 ">
+      <div className="">
+        <img src={Avi} alt="" className="avatar" />
+      </div>
       <a
         href="github.com/mosesfawole"
         target="_blank"
         className="flex items-center "
       >
-        <FaGithub className="m-2" /> Github
+        <FaGithub className=" md:m-2 mr-2" /> Github ↗
       </a>
       <a
         href="twitter.com/pharwoleh"
@@ -16,7 +19,7 @@ const Footer = () => {
         noreferrer="true"
         className="flex items-center"
       >
-        <FaTwitter className="m-2" /> Twitter
+        <FaTwitter className="md:m-2 mr-2" /> Twitter ↗
       </a>
     </div>
   );
