@@ -14,9 +14,10 @@ const HeroText = () => {
           I write {""}
           <span className="text-gray-200">
             interactive experiences and responsive web applications
-          </span>
-          using modern web technologies. <br /> I'm currently building with the
-          MERN Stack.
+          </span>{" "}
+          using modern web technologies. <br /> I'm{" "}
+          <span className="text-gray-200">learning/improving on </span>the MERN
+          Stack.
         </p>
       </div>
 

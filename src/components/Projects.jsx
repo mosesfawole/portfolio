@@ -4,11 +4,25 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 const Projects = ({ data }) => {
   const { title, description, github, live, stack } = data;
+  const containerVariants = {
+    hidden: {
+      opacity: 0,
+      x: "-100vw",
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        delay: 0.2,
+        type: "string",
+      },
+    },
+  };
   return (
     <motion.div
-      initial={{ x: -250 }}
-      animate={{ x: -10 }}
-      transition={{ delay: 0.2, type: "string", stiffness: 120 }}
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
       className=" cursor-default items-center"
     >
       <div className="box text-white p-8 shadow-md ">

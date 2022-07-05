@@ -6,12 +6,17 @@ import { MdMenu, MdCancel } from "react-icons/md";
 const Header = () => {
   const [isMenu, setisMenu] = useState(false);
 
+  const openMenu = () => {
+    setisMenu(!isMenu);
+    document.getElementById("menu").style.width = "100%";
+  };
   return (
     // navbar
     <nav className="">
       <motion.div
         initial={{ y: -250 }}
-        animate={{ y: -10, type: "string", stiffness: 120 }}
+        animate={{ y: 0 }}
+        transition={{ delay: 0.6, type: "string", stiffness: 500 }}
         className="mx-auto p-4  shadow-lg"
       >
         {/* Flex container  */}
@@ -42,40 +47,34 @@ const Header = () => {
           {/* Mobile menu  */}
           <div className="md:hidden flex">
             <MdMenu
-              className={
-                isMenu === true ? "hidden" : "flex text-white text-3xl t"
-              }
-              onClick={() => setisMenu(!isMenu)}
+              className={isMenu ? "hidden" : "flex text-white text-3xl t"}
+              onClick={openMenu}
             />
-            <motion.div
-              id="menu"
-              className={isMenu ? "app-menu menu-open" : "hidden"}
-            >
-              <div className="flex  ">
+
+            <div id="menu" className="app-menu">
+              <div className="flex closebtn  ">
                 {isMenu ? (
                   <MdCancel
-                    className="m-4 text-3xl text-white "
-                    onClick={() => setisMenu(!isMenu)}
+                    className="text-4xl text-white "
+                    onClick={() => {
+                      setisMenu(!isMenu);
+                      document.getElementById("menu").style.width = 0;
+                    }}
                   />
                 ) : (
                   <FaAngleDoubleLeft />
                 )}
               </div>
-              <ul className="p-6 text-center flex flex-col  items-center">
-                <li onClick={() => setisMenu(!isMenu)}>
-                  <Link to="/">Home</Link>
-                </li>
-                <li onClick={() => setisMenu(!isMenu)}>
-                  <Link to="/projects">Projects</Link>
-                </li>{" "}
-                <li onClick={() => setisMenu(!isMenu)}>
-                  <Link to="/info">About Me</Link>
-                </li>{" "}
-                <li onClick={() => setisMenu(!isMenu)}>
-                  <Link to="/contact">Contact </Link>
-                </li>
-              </ul>
-            </motion.div>
+              <div className="content text-2xl">
+                <Link to="/">Home</Link>
+
+                <Link to="/projects">Projects</Link>
+
+                <Link to="/info">About Me</Link>
+
+                <Link to="/contact">Contact </Link>
+              </div>
+            </div>
           </div>
         </div>
       </motion.div>
