@@ -2,7 +2,7 @@ import React from "react";
 import { FaEye, FaCodeBranch } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-const Projects = ({ data }) => {
+const Project = ({ data }) => {
   const { title, description, github, live, stack } = data;
   const containerVariants = {
     hidden: {
@@ -48,4 +48,4 @@ const Projects = ({ data }) => {
   );
 };
 
-export default Projects;
+export default Project;

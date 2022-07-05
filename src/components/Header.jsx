@@ -17,7 +17,7 @@ const Header = () => {
         initial={{ y: -250 }}
         animate={{ y: 0 }}
         transition={{ delay: 0.6, type: "string", stiffness: 500 }}
-        className="mx-auto p-4  shadow-lg"
+        className="mx-auto p-4 "
       >
         {/* Flex container  */}
         <div className="flex items-center justify-between">
@@ -32,7 +32,7 @@ const Header = () => {
               <li className="opacity-90  focus:opacity-100 cool-link">
                 <Link to="/">Home</Link>
               </li>
-              <li className="opacity-90  focus:opacity-100 cool-link ">
+              <li className="md:hidden opacity-90  focus:opacity-100 cool-link ">
                 <Link to="/projects">Projects</Link>
               </li>{" "}
               <li className="opacity-90  focus:opacity-100 cool-link ">
