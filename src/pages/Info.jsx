@@ -4,7 +4,23 @@ import { FaArrowLeft, FaArrowRight, FaDownload } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import HeroText from "../components/HeroText";
+import { motion } from "framer-motion";
 const Info = () => {
+  const containerVariants = {
+    hidden: {
+      y: "-100vh",
+    },
+    visible: {
+      y: 0,
+      transition: {
+        duration: 1,
+        type: "spring",
+        stiffness: 100,
+        when: "beforeChildren",
+        ease: "easeInOut",
+      },
+    },
+  };
   return (
     <div className="">
       <Header />
@@ -12,14 +28,19 @@ const Info = () => {
         <div className="hidden md:block">
           <HeroText />
         </div>
-        <div className="right grid resume p-4  md:relative md:top-20 ">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="right grid resume p-4  md:relative md:top-20 "
+        >
           <div className="flex justify-between">
-            <p className="text-xl text-gray-100">Moses Fawole</p>
+            <p className="text-2xl text-white font-semibold">Moses Fawole</p>
             <span>
               <FaDownload />
             </span>
           </div>
-          <div className="desc">
+          <div className="desc text-gray-400 text-sm ">
             I’m a frontend software developer, passionate about solving problems
             with code and transforming ideas from pixels to scalable products. I
             create usable applications with user experience as a top priority
@@ -27,14 +48,21 @@ const Info = () => {
           </div>
           <div className="section">
             <div className="title">
-              <p>Core Technologies</p>
+              <p className="text-white font-semibold">Core Technologies</p>
+              <p className="skills text-sm text-gray-400">
+                HTML/CSS, Javascript , React JS, Tailwind CSS, Next JS,
+                CSS-in-JS, Redux, Bootstrap. Node js, Framer motion
+              </p>
             </div>
-            <p>
-              HTML/CSS/SASS, Javascript [ES6+], React JS, Gatsby JS, Next JS,
-              Vue JS, CSS-in-JS, Typescript, GraphQL, Redux, Firebase.
-            </p>
+            <div className="title">
+              <p className="text-white font-semibold">Familiar with</p>
+              <p className="skills text-sm text-gray-400">
+                MongoDb, Express Js, Vue js, Graphql, Sanity cms, unit testing ,
+                Material-Ui
+              </p>
+            </div>
           </div>
-        </div>
+        </motion.div>
       </div>
       <div className="flex md:hidden">
         <div className="buttons  p-4 flex justify-center">

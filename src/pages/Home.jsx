@@ -74,7 +74,8 @@ const Home = () => {
       transition: {
         delay: 0.5,
         duration: 0.5,
-        when: "beforeChildVariants",
+        staggerChildren: 0.2,
+        when: "beforeChildren",
       },
     },
   };

@@ -80,15 +80,14 @@ const Projects = () => {
   };
   return (
     <>
-      <motion.div
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-        id="projects"
-        className="md:hidden cursor-default items-center"
-      >
+      <div id="projects" className="md:hidden cursor-default items-center">
         <Header />
-        <div className="right grid projects">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="right grid projects"
+        >
           <p className="text-white text-xl font-mono uppercase mb-10 font-bold text-center ">
             Projects
           </p>
@@ -99,7 +98,7 @@ const Projects = () => {
               </div>
             ))}
           </div>
-        </div>
+        </motion.div>
         <div className="buttons flex justify-evenly mb-10 ">
           <div className="button flex mt-2 ">
             <button className="text-gray-200 px-5 p-2 rounded-md">
@@ -119,7 +118,7 @@ const Projects = () => {
         <div className="p-2 flex justify-center">
           <Footer />
         </div>
-      </motion.div>
+      </div>
     </>
   );
 };
