@@ -10,24 +10,57 @@ const Header = () => {
     setisMenu(!isMenu);
     document.getElementById("menu").style.width = "100%";
   };
+  const logoVariants = {
+    hidden: { rotate: -180 },
+    visible: {
+      rotate: 0,
+      transition: {
+        duration: 1,
+      },
+    },
+  };
+  const pVariants = {
+    hidden: {
+      opacity: 0,
+      pathLength: 0,
+    },
+    visible: {
+      opacity: 1,
+      pathLength: 1,
+      transition: {
+        duration: 2,
+        ease: "easeInOut",
+      },
+    },
+  };
   return (
     // navbar
     <nav className="">
-      <motion.div
-        initial={{ y: -250 }}
-        animate={{ y: 0 }}
-        transition={{ delay: 0.6, type: "string", stiffness: 500 }}
-        className="mx-auto p-4 "
-      >
+      <motion.div className="mx-auto p-4 ">
         {/* Flex container  */}
         <div className="flex items-center justify-between">
           {/* Logo */}
 
-          <div className="pt-2  ">
-            <p className="text-white text-3xl font-bold">Mo.dev</p>
-          </div>
+          <motion.div
+            variants={logoVariants}
+            initial="hidden"
+            animate="visible"
+            className="pt-2  "
+          >
+            <motion.p
+              variants={pVariants}
+              className="text-white text-3xl font-bold"
+            >
+              Mo.dev
+            </motion.p>
+          </motion.div>
           {/* Menu items */}
-          <div className="hidden space-x-6 md:flex ">
+          <motion.div
+            initial={{ y: -250 }}
+            animate={{ y: 0 }}
+            transition={{ delay: 0.6, type: "string", stiffness: 500 }}
+            className="hidden space-x-6 md:flex "
+          >
             <ul className=" text-white flex items-center space-x-3  transition-all translate-x-2 ">
               <li className="opacity-90  focus:opacity-100 cool-link">
                 <Link to="/">Home</Link>
@@ -42,7 +75,7 @@ const Header = () => {
                 <Link to="contact">Contact </Link>
               </li>
             </ul>
-          </div>
+          </motion.div>
 
           {/* Mobile menu  */}
           <div className="md:hidden flex">

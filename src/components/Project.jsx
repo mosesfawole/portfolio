@@ -2,8 +2,8 @@ import React from "react";
 import { FaEye, FaCodeBranch } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-const Project = ({ data }) => {
-  const { title, description, github, live, stack } = data;
+const Project = ({ details }) => {
+  const { title, description, github, live, technology } = details;
   const containerVariants = {
     hidden: {
       opacity: 0,
@@ -28,10 +28,10 @@ const Project = ({ data }) => {
       <div className="box text-white p-8 shadow-md ">
         <h3 className="text-3xl font-semibold mb-2">{title}</h3>
         <h4 className="uppercase font-mono font-semibold text-sm mb-2 ">
-          {stack}
+          {technology}
         </h4>
         <p className="text-sm text-slate-400 capitalize  mb-2">{description}</p>
-        <div className="flex text-xs  ">
+        <div className="flex text-xs   ">
           <span className="icon cursor-pointer transition-all  text-gray-400 hover:text-white">
             <Link className="flex mr-2  items-center" to={github}>
               <FaEye className="mr-1" /> Live

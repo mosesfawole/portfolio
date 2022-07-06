@@ -1,14 +1,18 @@
 import { Project } from "../components";
 import Footer from "../components/Footer";
-import Avi from "../image/Banner.jpg";
 import Header from "../components/Header";
 import { motion } from "framer-motion";
-import HeroText from "../components/HeroText";
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 const Projects = () => {
-  const [projects, setProjects] = useState([
+  let navigate = useNavigate();
+  useEffect(() => {
+    if (window.screen.width > 768) {
+      navigate("/");
+    }
+  }, [navigate]);
+  const projects = [
     {
       title: "Checkmate",
       description: "Sign up portal for Checkmate Africa community",
@@ -58,7 +62,7 @@ const Projects = () => {
       live: "https://checkmate.africa/",
       stack: "React + Styled Components",
     },
-  ]);
+  ];
   const containerVariants = {
     hidden: {
       opacity: 0,
@@ -75,45 +79,48 @@ const Projects = () => {
     },
   };
   return (
-    <motion.div
-      variants={containerVariants}
-      initial="hidden"
-      animate="visible"
-      className=" cursor-default items-center"
-    >
-      <Header />
-      <div className="right grid projects">
-        <p className="text-white text-xl font-mono uppercase mb-10 font-bold text-center ">
-          Projects
-        </p>
-        <div className=" grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-4 w-3/4  m-auto opacity-100 shadow-md proj ">
-          {projects.map((project, index) => (
-            <div key={index} className="">
-              <Project data={project} />
-            </div>
-          ))}
+    <>
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        id="projects"
+        className="md:hidden cursor-default items-center"
+      >
+        <Header />
+        <div className="right grid projects">
+          <p className="text-white text-xl font-mono uppercase mb-10 font-bold text-center ">
+            Projects
+          </p>
+          <div className=" grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-4 w-3/4  m-auto opacity-100 shadow-md proj ">
+            {projects.map((project, index) => (
+              <div key={index} className="">
+                <Project details={project} />
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-      <div className="buttons flex justify-evenly mb-10">
-        <div className="button flex mt-2 ">
-          <button className="text-gray-200 px-3 p-2 rounded-md">
-            <Link className="flex items-center" to="/">
-              <FaArrowLeft className="mr-2" /> Home
-            </Link>
-          </button>
+        <div className="buttons flex justify-evenly mb-10 ">
+          <div className="button flex mt-2 ">
+            <button className="text-gray-200 px-5 p-2 rounded-md">
+              <Link className="flex items-center" to="/">
+                <FaArrowLeft className="mr-2" /> Home
+              </Link>
+            </button>
+          </div>
+          <div className="button flex mt-2">
+            <button className="text-gray-200 px-5 p-2 rounded-md">
+              <Link className="flex items-center" to="/info">
+                Info <FaArrowRight className="ml-2" />
+              </Link>
+            </button>
+          </div>
         </div>
-        <div className="button flex mt-2">
-          <button className="text-gray-200 px-3 p-2 rounded-md">
-            <Link className="flex items-center" to="/info">
-              Info <FaArrowRight className="ml-2" />
-            </Link>
-          </button>
+        <div className="p-2 flex justify-center">
+          <Footer />
         </div>
-      </div>
-      <div className="p-2 flex justify-center">
-        <Footer />
-      </div>
-    </motion.div>
+      </motion.div>
+    </>
   );
 };
 
