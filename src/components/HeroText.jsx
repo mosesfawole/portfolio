@@ -50,9 +50,9 @@ const HeroText = () => {
           <span className="text-gray-100 font-indie font-semibold">
             Frontend Web Developer
           </span>
-          , i build with the{" "}
+          , and sometimes work with the{" "}
           <span className="text-gray-100 font-indie font-semibold">
-            MERN Stack (FE Heavy).{" "}
+            backend using the MERN Stack.{" "}
           </span>
         </h2>
         <p className="md:mb-10 mt-2  ">
