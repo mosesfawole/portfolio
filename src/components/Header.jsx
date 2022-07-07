@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { FaAngleDoubleLeft, FaAngleDoubleRight } from "react-icons/fa";
+import { FaAngleDoubleLeft } from "react-icons/fa";
 import { MdMenu, MdCancel } from "react-icons/md";
 const Header = () => {
   const [isMenu, setisMenu] = useState(false);

@@ -1,6 +1,5 @@
-import React from "react";
 import Header from "../components/Header";
-import { FaArrowLeft, FaArrowRight, FaDownload } from "react-icons/fa";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import HeroText from "../components/HeroText";
@@ -45,14 +44,14 @@ const Info = () => {
         <div className="buttons   flex justify-center">
           <button className="button flex m-2 text-gray-200 px-3 py-2 rounded-md ">
             <Link className="flex items-center" to="/projects">
-              <FaArrowLeft className="mr-2 items-center" /> Projects
+              <FaArrowLeft className="mr-2 " /> Projects
             </Link>
           </button>
         </div>
         <div className="buttons  flex justify-center">
           <button className="button flex m-2 text-gray-200 px-3 py-2 rounded-md ">
             <Link className="flex items-center" to="/">
-              Home <FaArrowRight className="ml-2 items-center" />
+              Home <FaArrowRight className="ml-2 r" />
             </Link>
           </button>
         </div>

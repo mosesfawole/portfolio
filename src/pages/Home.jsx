@@ -1,5 +1,4 @@
 import { Project } from "../components";
-import Footer from "../components/Footer";
 import Avi from "../image/Banner.jpg";
 import Header from "../components/Header";
 import { motion } from "framer-motion";

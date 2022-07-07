@@ -1,11 +1,4 @@
-import {
-  FaEnvelope,
-  FaGithub,
-  FaMailBulk,
-  FaMailchimp,
-  FaTwitter,
-} from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { FaEnvelope, FaGithub, FaTwitter } from "react-icons/fa";
 import Avi from "../image/Banner.jpg";
 const Footer = () => {
   return (

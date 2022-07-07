@@ -1,7 +1,5 @@
-import React from "react";
 import { FaEye, FaCodeBranch } from "react-icons/fa";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 const Project = ({ details }) => {
   const { title, description, github, live, technology } = details;
   const containerVariants = {
