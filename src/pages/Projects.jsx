@@ -14,55 +14,53 @@ const Projects = () => {
   }, [navigate]);
   const projects = [
     {
-      title: "Checkmate",
-      description: "Sign up portal for Checkmate Africa community",
-      github: "https://github.com/mosesfawole/checkmate",
-      live: "https://checkmate.africa/",
-      stack: "React + Styled Components",
+      title: "Syncfusion Dashboard",
+      description:
+        "Functional Dashboard created using Syncfusion ui comonents,tailwind css and reactjs",
+      github: "https://github.com/mosesfawole/syncfusion-dashboard",
+      live: "https://syncfusion-dashboard-gamma.vercel.app/",
+      technology: "React js + Syncfusion components + Tailwind ",
     },
     {
-      title: "Checkmate",
-      description: "Sign up portal for Checkmate Africa community",
-      github: "https://github.com/mosesfawole/checkmate",
-      live: "https://checkmate.africa/",
-      stack: "React + Styled Components",
+      title: "Ecommerce store",
+      description: "Ecommerce web app with stripe payment gateway",
+      github: "https://github.com/mosesfawole/ecommerce",
+      live: "https://ecommerce-mosesfawole.vercel.app/",
+      technology: "Next js + Sanity cms + stripe",
     },
     {
-      title: "Checkmate",
-      description: "Sign up portal for Checkmate Africa community",
+      title: "Todo App",
+      description:
+        "A todo app with user authentication built with the mern stack, redux template ",
       github: "https://github.com/mosesfawole/checkmate",
-      live: "https://checkmate.africa/",
-      stack: "React + Styled Components",
+      live: "https://mf-todo-app.herokuapp.com/login",
+      technology:
+        "MongoDb + Express js + React js + Node js + Redux template + Toastify",
     },
     {
-      title: "Checkmate",
-      description: "Sign up portal for Checkmate Africa community",
-      github: "https://github.com/mosesfawole/checkmate",
-      live: "https://checkmate.africa/",
-      stack: "React + Styled Components",
+      title: "Countries in the world",
+      description: "Frontend mentor challenge",
+      github: "https://github.com/mosesfawole/countries-api",
+      live: "https://countries-api-tau-blush.vercel.app",
+      technology: "React + Tailwind Css + framer-motion ",
+    },
+
+    {
+      title: "Fitness App",
+      description: "An exercise fitness app",
+      github: "https://github.com/mosesfawole/recipe-app",
+      live: "https://mf-recipe-app.netlify.app/",
+      technology: "React + Tailwind Css + framer-motion",
     },
     {
-      title: "Checkmate",
-      description: "Sign up portal for Checkmate Africa community",
-      github: "https://github.com/mosesfawole/checkmate",
+      title: " Blog App",
+      description: "A simple blog app",
+      github: "https://github.com/mosesfawole/blog-app",
       live: "https://checkmate.africa/",
-      stack: "React + Styled Components",
-    },
-    {
-      title: "Checkmate",
-      description: "Sign up portal for Checkmate Africa community",
-      github: "https://github.com/mosesfawole/checkmate",
-      live: "https://checkmate.africa/",
-      stack: "React + Styled Components",
-    },
-    {
-      title: "Checkmate",
-      description: "Sign up portal for Checkmate Africa community",
-      github: "https://github.com/mosesfawole/checkmate",
-      live: "https://checkmate.africa/",
-      stack: "React + Styled Components",
+      technology: "React + Json server ",
     },
   ];
+
   const containerVariants = {
     hidden: {
       opacity: 0,
@@ -99,25 +97,25 @@ const Projects = () => {
             ))}
           </div>
         </motion.div>
-        <div className="buttons flex justify-evenly mb-10 ">
-          <div className="button flex mt-2 ">
-            <button className="text-gray-200 px-5 p-2 rounded-md">
+
+        <div className="flex justify-evenly  md:hidden mt-6 mb-4">
+          <div className="buttons  ">
+            <button className="button   text-gray-200 px-3 py-2 rounded-md ">
               <Link className="flex items-center" to="/">
-                <FaArrowLeft className="mr-2" /> Home
+                <FaArrowLeft className="mr-2 " /> Home
               </Link>
             </button>
           </div>
-          <div className="button flex mt-2">
-            <button className="text-gray-200 px-5 p-2 rounded-md">
+
+          <div className="buttons  flex justify-center">
+            <button className="button flex  text-gray-200 px-3 py-2 rounded-md ">
               <Link className="flex items-center" to="/info">
-                Info <FaArrowRight className="ml-2" />
+                Info <FaArrowRight className="ml-2 " />
               </Link>
             </button>
           </div>
         </div>
-        <div className="p-2 flex justify-center">
-          <Footer />
-        </div>
+        <Footer />
       </div>
     </>
   );

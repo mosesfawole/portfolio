@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import HeroText from "../components/HeroText";
 import { motion } from "framer-motion";
+import { Resume } from "../components";
 const Info = () => {
   const containerVariants = {
     hidden: {
@@ -22,7 +23,7 @@ const Info = () => {
     },
   };
   return (
-    <div className="">
+    <div className="items-center">
       <Header />
       <div className="grid md:grid-cols-2 p-4">
         <div className="hidden md:block">
@@ -32,53 +33,32 @@ const Info = () => {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="right grid resume p-4  md:relative md:top-20 "
+          className="p-2 md:relative md:top-10 "
         >
-          <div className="flex justify-between">
-            <p className="text-2xl text-white font-semibold">Moses Fawole</p>
-            <span>
-              <FaDownload />
-            </span>
-          </div>
-          <div className="desc text-gray-400 text-sm ">
-            I’m a frontend software developer, passionate about solving problems
-            with code and transforming ideas from pixels to scalable products. I
-            create usable applications with user experience as a top priority
-            using various web tools, languages and technology.
-          </div>
-          <div className="section">
-            <div className="title">
-              <p className="text-white font-semibold">Core Technologies</p>
-              <p className="skills text-sm text-gray-400">
-                HTML/CSS, Javascript , React JS, Tailwind CSS, Next JS,
-                CSS-in-JS, Redux, Bootstrap. Node js, Framer motion
-              </p>
-            </div>
-            <div className="title">
-              <p className="text-white font-semibold">Familiar with</p>
-              <p className="skills text-sm text-gray-400">
-                MongoDb, Express Js, Vue js, Graphql, Sanity cms, unit testing ,
-                Material-Ui
-              </p>
-            </div>
-          </div>
+          <p className="skills text-center text-3xl font-semibold text-white">
+            Resume
+          </p>
+          <Resume />
         </motion.div>
       </div>
-      <div className="flex md:hidden">
-        <div className="buttons  p-4 flex justify-center">
+      <div className="flex justify-center md:hidden ">
+        <div className="buttons   flex justify-center">
           <button className="button flex m-2 text-gray-200 px-3 py-2 rounded-md ">
             <Link className="flex items-center" to="/projects">
-              Explore <FaArrowRight className="ml-2 items-center" />
+              <FaArrowLeft className="mr-2 items-center" /> Projects
             </Link>
           </button>
         </div>
-        <div className="buttons  p-4 flex justify-center">
+        <div className="buttons  flex justify-center">
           <button className="button flex m-2 text-gray-200 px-3 py-2 rounded-md ">
-            <Link className="flex items-center" to="/projects">
-              Explore <FaArrowRight className="ml-2 items-center" />
+            <Link className="flex items-center" to="/">
+              Home <FaArrowRight className="ml-2 items-center" />
             </Link>
           </button>
         </div>
+      </div>
+      <div className="md:hidden">
+        <Footer />
       </div>
     </div>
   );

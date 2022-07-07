@@ -27,20 +27,30 @@ const Project = ({ details }) => {
     >
       <div className="box text-white p-8 shadow-md ">
         <h3 className="text-3xl font-semibold mb-2">{title}</h3>
-        <h4 className="uppercase font-mono font-semibold text-sm mb-2 ">
+        <h4 className="uppercase font-mono font-semibold text-md mb-2 ">
           {technology}
         </h4>
-        <p className="text-sm text-slate-400 capitalize  mb-2">{description}</p>
-        <div className="flex text-xs   ">
+        <p className="text-md text-slate-400 capitalize  mb-2">{description}</p>
+        <div className="flex text-sm   ">
           <span className="icon cursor-pointer transition-all  text-gray-400 hover:text-white">
-            <Link className="flex mr-2  items-center" to={github}>
+            <a
+              className="flex mr-2  items-center"
+              href={live}
+              target="_blank"
+              rel="noreferrer"
+            >
               <FaEye className="mr-1" /> Live
-            </Link>
+            </a>
           </span>
           <span className="icon  cursor-pointer transition-all  text-gray-400 hover:text-white">
-            <Link className="flex mr-2  items-center" to={live}>
+            <a
+              className="flex mr-2  items-center"
+              href={github}
+              target="_blank "
+              rel="noreferrer"
+            >
               <FaCodeBranch className="mr-1" /> Source
-            </Link>
+            </a>
           </span>
         </div>
       </div>

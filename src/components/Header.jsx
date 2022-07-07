@@ -38,7 +38,7 @@ const Header = () => {
     <nav className="">
       <motion.div className="mx-auto p-4 ">
         {/* Flex container  */}
-        <div className="flex items-center justify-between">
+        <div className="flex items-center  justify-between">
           {/* Logo */}
 
           <motion.div
@@ -52,7 +52,7 @@ const Header = () => {
               top: 0,
               bottom: 0,
             }}
-            className="pt-2  "
+            className="pt-2 "
           >
             <motion.p
               variants={pVariants}

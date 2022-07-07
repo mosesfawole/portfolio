@@ -15,53 +15,50 @@ const Home = () => {
   }, []);
   const projects = [
     {
-      title: "Checkmate",
-      description: "Sign up portal for Checkmate Africa community",
-      github: "https://github.com/mosesfawole/checkmate",
-      live: "https://checkmate.africa/",
-      technology: "React + Styled Components",
+      title: "Syncfusion Dashboard",
+      description:
+        "Functional Dashboard created using Syncfusion ui comonents,tailwind css and reactjs",
+      github: "https://github.com/mosesfawole/syncfusion-dashboard",
+      live: "https://syncfusion-dashboard-gamma.vercel.app/",
+      technology: "React js + Syncfusion components + Tailwind ",
     },
     {
-      title: "Checkmate",
-      description: "Sign up portal for Checkmate Africa community",
-      github: "https://github.com/mosesfawole/checkmate",
-      live: "https://checkmate.africa/",
-      technology: "React + Styled Components",
+      title: "Ecommerce store",
+      description: "Ecommerce web app with stripe payment gateway",
+      github: "https://github.com/mosesfawole/ecommerce",
+      live: "https://ecommerce-mosesfawole.vercel.app/",
+      technology: "Next js + Sanity cms + stripe",
     },
     {
-      title: "Checkmate",
-      description: "Sign up portal for Checkmate Africa community",
+      title: "Todo App",
+      description:
+        "A todo app with user authentication built with the mern stack, redux template ",
       github: "https://github.com/mosesfawole/checkmate",
-      live: "https://checkmate.africa/",
-      technology: "React + Styled Components",
+      live: "https://mf-todo-app.herokuapp.com/login",
+      technology:
+        "MongoDb + Express js + React js + Node js + Redux template + Toastify",
     },
     {
-      title: "Checkmate",
-      description: "Sign up portal for Checkmate Africa community",
-      github: "https://github.com/mosesfawole/checkmate",
-      live: "https://checkmate.africa/",
-      technology: "React + Styled Components",
+      title: "Countries in the world",
+      description: "Frontend mentor challenge",
+      github: "https://github.com/mosesfawole/countries-api",
+      live: "https://countries-api-tau-blush.vercel.app",
+      technology: "React + Tailwind Css + framer-motion ",
+    },
+
+    {
+      title: "Fitness App",
+      description: "An exercise fitness app",
+      github: "https://github.com/mosesfawole/recipe-app",
+      live: "https://mf-recipe-app.netlify.app/",
+      technology: "React + Tailwind Css + framer-motion",
     },
     {
-      title: "Checkmate",
-      description: "Sign up portal for Checkmate Africa community",
-      github: "https://github.com/mosesfawole/checkmate",
+      title: " Blog App",
+      description: "A simple blog app",
+      github: "https://github.com/mosesfawole/blog-app",
       live: "https://checkmate.africa/",
-      technology: "React + Styled Components",
-    },
-    {
-      title: "Checkmate",
-      description: "Sign up portal for Checkmate Africa community",
-      github: "https://github.com/mosesfawole/checkmate",
-      live: "https://checkmate.africa/",
-      technology: "React + Styled Components",
-    },
-    {
-      title: "Checkmate",
-      description: "Sign up portal for Checkmate Africa community",
-      github: "https://github.com/mosesfawole/checkmate",
-      live: "https://checkmate.africa/",
-      technology: "React + Styled Components",
+      technology: "React + Json server ",
     },
   ];
 
@@ -95,11 +92,11 @@ const Home = () => {
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="grid grid-cols-1 gap-4 md:grid-cols-2"
+            className="grid grid-cols-1  gap-4 md:grid-cols-2"
           >
             <HeroText />
 
-            <div className="right hidden md:grid projects md:relative  md:top-20 h-1/2 overflow-y-auto overflow-x-hidden ">
+            <div className="right p-4 hidden md:grid projects md:relative  md:top-20  ">
               <p className="text-white text-xl font-mono uppercase mb-10 font-bold text-center ">
                 Projects
               </p>

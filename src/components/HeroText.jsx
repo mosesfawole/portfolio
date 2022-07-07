@@ -6,12 +6,14 @@ const HeroText = () => {
   const textVariants = {
     hidden: {
       opacity: 0,
+      x: "-100vw",
     },
     visible: {
+      when: "beforeChildren",
+      x: 0,
       opacity: 1,
       transition: {
         duration: 0.3,
-        when: "beforeChildren",
       },
     },
   };
@@ -24,7 +26,7 @@ const HeroText = () => {
       scale: 1.05,
       opacity: 1,
       // boxShadow: "0px 0px 8px rgb(255,255,255",
-      // textShadow: "0px 0px 8px rgb(255,255,255",
+      textShadow: "0px 0px 8px rgb(255,255,255",
       transition: {
         duration: 0.3,
         repeatType: "reverse",
@@ -36,30 +38,31 @@ const HeroText = () => {
     <motion.div
       variants={textVariants}
       hidden="hidden"
-      animate="animate"
+      animate="visible"
       className="hero-text p-8 flex flex-col md:fixed md:top-40  "
     >
       <h1 className="md:text-4xl   md:mb-2 font-semibold">
         Hi, I'm Moses Fawole!
       </h1>
-      <div className="font-mono text-sm">
+      <div className=" text-sm">
         <h2 className="text-sm md:mt-10  ">
           I'm a{" "}
-          <span className="text-gray-100 font-semibold">
+          <span className="text-gray-100 font-indie font-semibold">
             Frontend Web Developer
           </span>
           , i build with the{" "}
-          <span className="text-gray-100 font-semibold">
+          <span className="text-gray-100 font-indie font-semibold">
             MERN Stack (FE Heavy).{" "}
           </span>
         </h2>
         <p className="md:mb-10 mt-2  ">
-          I write {""}
-          <span className="text-gray-100 font-semibold">
+          I create {""}
+          <span className="text-gray-100 font-indie font-semibold">
             interactive experiences and responsive web applications
           </span>{" "}
-          using modern web technologies. <br /> I'm{" "}
-          <span className="text-white font-semibold">
+          technologies
+          <br /> I'm{" "}
+          <span className="text-white font-indie font-semibold">
             learning/improving on{" "}
           </span>
           the MERN Stack.
@@ -72,7 +75,10 @@ const HeroText = () => {
           animate="visible"
           className="button flex m-2 text-gray-200 px-3 py-2 rounded-md "
         >
-          <Link className="flex items-center" to="/projects">
+          <Link
+            className="flex items-center text-sm font-semibold"
+            to="/projects"
+          >
             Explore <FaArrowRight className="ml-2 items-center" />
           </Link>
         </motion.button>

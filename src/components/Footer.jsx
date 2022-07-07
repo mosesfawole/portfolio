@@ -1,4 +1,10 @@
-import { FaGithub, FaMailBulk, FaMailchimp, FaTwitter } from "react-icons/fa";
+import {
+  FaEnvelope,
+  FaGithub,
+  FaMailBulk,
+  FaMailchimp,
+  FaTwitter,
+} from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Avi from "../image/Banner.jpg";
 const Footer = () => {
@@ -32,10 +38,12 @@ const Footer = () => {
           noreferrer="true"
           className="flex items-center md:opacity-75 md:hover:opacity-100 "
         >
-          <FaMailchimp className="md:m-2 mr-2" /> Email
+          <FaEnvelope className="md:m-2 mr-2" /> Email
         </a>
       </div>
-      <div className="md:hidden text-white flex items-center justify-evenly text-2xl ">
+
+      {/* mobile view */}
+      <div className="md:hidden text-white flex items-center justify-center space-x-6 text-2xl mt-2  ">
         <a
           rel="noreferrer"
           href="https://github.com/mosesfawole"
@@ -60,11 +68,11 @@ const Footer = () => {
           noreferrer="true"
           className="flex items-center md:opacity-75 md:hover:opacity-100 "
         >
-          <FaMailchimp className="md:m-2 mr-2" />
+          <FaEnvelope className="md:m-2 mr-2" />
         </a>
       </div>
-      <div className="text-center mt-4 md:text-start">
-        <p className=" ">
+      <div className="text-center text-gray-400 mt-4 md:text-start ">
+        <p className=" p-2">
           Inspired by{" "}
           <a
             rel="noreferrer"

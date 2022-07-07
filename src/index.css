@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Raleway&display=swap");
 
 * {
   margin: 0;
@@ -37,8 +37,12 @@ body::-webkit-scrollbar {
 }
 .box {
   background: #1b1b1d;
+  font-family: "Indie Flower";
   font-variant-caps: all-small-caps;
-  opacity: 0.6;
+  opacity: 0.9;
+}
+.font-indie {
+  font-family: "Indie Flower";
 }
 .box:hover {
   transition: all 0.2s ease-in-out;
@@ -47,9 +51,6 @@ body::-webkit-scrollbar {
 }
 .icon {
   transition: all 0.3s ease-in-out;
-}
-.projects {
-  width: fit-content;
 }
 
 .cool-link {
@@ -141,6 +142,7 @@ h2 {
   text-decoration: none;
   cursor: pointer;
   width: fit-content;
+  /* font-family: "Indie Flower"; */
   font-variant-caps: all-small-caps;
 }
 
@@ -148,12 +150,10 @@ h2 {
   background-color: #1b1b1d;
 }
 .skills {
+  font-family: "Indie Flower";
   font-variant-caps: all-small-caps;
 }
 @media (min-width: 768px) {
-  #root {
-    overflow: hidden;
-  }
   .projects {
     left: 100%;
   }
