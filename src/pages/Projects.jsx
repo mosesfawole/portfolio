@@ -8,6 +8,8 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 const Projects = () => {
   let navigate = useNavigate();
   useEffect(() => {
+    window.scrollTo(0, 0);
+
     if (window.screen.width > 768) {
       navigate("/");
     }
@@ -46,18 +48,25 @@ const Projects = () => {
     },
 
     {
-      title: "Fitness App",
-      description: "An exercise fitness app",
+      title: "Recipe App",
+      description: "Food recipe app, with instructions and ingridients",
       github: "https://github.com/mosesfawole/recipe-app",
       live: "https://mf-recipe-app.netlify.app/",
-      technology: "React + Tailwind Css + framer-motion",
+      technology: "React + Tailwind Css + framer-motion + styled-components",
     },
     {
-      title: " Blog App",
-      description: "A simple blog app",
-      github: "https://github.com/mosesfawole/blog-app",
-      live: "https://checkmate.africa/",
-      technology: "React + Json server ",
+      title: " Snap",
+      description: "frontend mentor challenge, with dropdown and sidebar menu",
+      github: "https://mf-snap.netlify.app",
+      live: "https://github.com/mosesfawole/snap",
+      technology: "React + Tailwind Css + HeadlessUi",
+    },
+    {
+      title: " Quiz App",
+      description: "frontend mentor challenge, with dropdown and sidebar menu",
+      github: "https://mf-quiz-app.netlify.app/",
+      live: "https://github.com/mosesfawole/quiz-app",
+      technology: "React + Typescript + styled-components",
     },
   ];
 
@@ -79,16 +88,16 @@ const Projects = () => {
   return (
     <>
       <div id="projects" className="md:hidden cursor-default items-center">
-        <Header />
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
           className="right grid projects"
         >
-          <p className="text-white text-xl font-mono uppercase mb-10 font-bold text-center ">
+          <p className="skills mb-10 text-center text-3xl font-semibold text-white">
             Projects
           </p>
+
           <div className=" grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-4 w-3/4  m-auto opacity-100 shadow-md proj ">
             {projects.map((project, index) => (
               <div key={index} className="">
@@ -100,7 +109,7 @@ const Projects = () => {
 
         <div className="flex justify-evenly  md:hidden mt-6 mb-4">
           <div className="buttons  ">
-            <button className="button   text-gray-200 px-3 py-2 rounded-md ">
+            <button className="button text-gray-200 px-3 py-2 rounded-md ">
               <Link className="flex items-center" to="/">
                 <FaArrowLeft className="mr-2 " /> Home
               </Link>

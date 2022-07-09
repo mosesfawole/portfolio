@@ -1,6 +1,7 @@
 import { FaArrowRight } from "react-icons/fa";
 import Footer from "./Footer";
 import { motion } from "framer-motion";
+import Avi from "../image/Banner.jpg";
 import { Link } from "react-router-dom";
 const HeroText = () => {
   const textVariants = {
@@ -35,58 +36,64 @@ const HeroText = () => {
     },
   };
   return (
-    <motion.div
-      variants={textVariants}
-      hidden="hidden"
-      animate="visible"
-      className="hero-text p-8 flex flex-col md:fixed md:top-40  "
-    >
-      <h1 className="md:text-4xl   md:mb-2 font-semibold">
-        Hi, I'm Moses Fawole!
-      </h1>
-      <div className=" text-sm">
-        <h2 className="text-sm md:mt-10  ">
-          I'm a{" "}
-          <span className="text-gray-100 font-indie font-semibold">
-            Frontend Web Developer
-          </span>
-          , and sometimes work with the{" "}
-          <span className="text-gray-100 font-indie font-semibold">
-            backend using the MERN Stack.{" "}
-          </span>
-        </h2>
-        <p className="md:mb-10 mt-2  ">
-          I create {""}
-          <span className="text-gray-100 font-indie font-semibold">
-            interactive experiences and responsive web applications
-          </span>{" "}
-          technologies
-          <br /> I'm{" "}
-          <span className="text-white font-indie font-semibold">
-            learning/improving on{" "}
-          </span>
-          the MERN Stack.
-        </p>
+    <>
+      <div className="md:hidden flex mx-auto avi">
+        <img src={Avi} alt="" className="shadow-md " />
       </div>
-      <div className="buttons md:hidden  p-4 flex justify-center">
-        <motion.button
-          variants={buttonVariants}
-          hidden="hidden"
-          animate="visible"
-          className="button flex m-2 text-gray-200 px-3 py-2 rounded-md "
-        >
-          <Link
-            className="flex items-center text-sm font-semibold"
-            to="/projects"
+      <motion.div
+        variants={textVariants}
+        hidden="hidden"
+        animate="visible"
+        className="hero-text p-8 flex flex-col md:fixed md:top-40  "
+      >
+        <h1 className="md:text-4xl  text-xl  md:mb-2 font-semibold">
+          Hi, I'm Moses Fawole!
+        </h1>
+        <div className=" text-sm">
+          <h2 className="text-sm md:mt-10  ">
+            I'm a{" "}
+            <span className="text-gray-100 font-indie font-semibold">
+              Frontend Web Developer
+            </span>
+            , and sometimes work with the{" "}
+            <span className="text-gray-100 font-indie font-semibold">
+              backend using the MERN Stack.{" "}
+            </span>
+          </h2>
+          <p className="md:mb-10 mt-1 md:mt-2  ">
+            I create {""}
+            <span className="text-gray-100 font-indie font-semibold">
+              interactive experiences and responsive web applications
+            </span>{" "}
+            technologies
+            <br /> I'm{" "}
+            <span className="text-white font-indie font-semibold">
+              learning{" "}
+            </span>
+            the MERN Stack and various skills.
+            <br />
+          </p>
+        </div>
+        <div className="buttons md:hidden flex justify-center">
+          <motion.button
+            variants={buttonVariants}
+            hidden="hidden"
+            animate="visible"
+            className="button flex text-gray-200 px-3 py-2 rounded-md "
           >
-            Explore <FaArrowRight className="ml-2 items-center" />
-          </Link>
-        </motion.button>
-      </div>
-      <div className="mt-4 md:mt-10 ">
-        <Footer />
-      </div>
-    </motion.div>
+            <Link
+              className="flex items-center text-sm font-semibold"
+              to="/projects"
+            >
+              Explore <FaArrowRight className="ml-2 items-center" />
+            </Link>
+          </motion.button>
+        </div>
+        <div className="mt-4 md:mt-10 ">
+          <Footer />
+        </div>
+      </motion.div>
+    </>
   );
 };
 

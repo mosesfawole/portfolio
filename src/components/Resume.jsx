@@ -16,7 +16,7 @@ const Resume = () => {
       <div className="text-white mb-4">
         <p>Frontend Developer</p>
       </div>
-      <div className="desc text-gray-400 text-sm tex mb-4 ">
+      <div className="desc text-gray-400 text-sm  mb-4 ">
         I'm a frontend web devloper, passionate about building
         functional,scalable and efficient codes for the best user experiences,
         I'm a self-taught developer with a passion for learning and
@@ -51,7 +51,7 @@ const Resume = () => {
             or send me a{" "}
             <a
               className="text-white underline font-semibold"
-              href="twitter.com/pharwoleh"
+              href="https://twitter.com/pharwoleh"
             >
               dm
             </a>{" "}

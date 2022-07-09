@@ -1,11 +1,14 @@
-import Header from "../components/Header";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import HeroText from "../components/HeroText";
 import { motion } from "framer-motion";
 import { Resume } from "../components";
+import { useEffect } from "react";
 const Info = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
   const containerVariants = {
     hidden: {
       y: "-100vh",
@@ -23,7 +26,6 @@ const Info = () => {
   };
   return (
     <div className="items-center">
-      <Header />
       <div className="grid md:grid-cols-2 p-4">
         <div className="hidden md:block">
           <HeroText />
@@ -34,13 +36,13 @@ const Info = () => {
           animate="visible"
           className="p-2 md:relative md:top-10 "
         >
-          <p className="skills text-center text-3xl font-semibold text-white">
+          <p className="skills mb-10 text-center text-3xl font-semibold text-white">
             Resume
           </p>
           <Resume />
         </motion.div>
       </div>
-      <div className="flex justify-center md:hidden ">
+      <div className="flex justify-evenly md:hidden ">
         <div className="buttons   flex justify-center">
           <button className="button flex m-2 text-gray-200 px-3 py-2 rounded-md ">
             <Link className="flex items-center" to="/projects">

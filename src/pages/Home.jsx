@@ -1,4 +1,4 @@
-import { Project } from "../components";
+import { Project, Resume } from "../components";
 import Avi from "../image/Banner.jpg";
 import Header from "../components/Header";
 import { motion } from "framer-motion";
@@ -46,18 +46,25 @@ const Home = () => {
     },
 
     {
-      title: "Fitness App",
-      description: "An exercise fitness app",
+      title: "Recipe App",
+      description: "Food recipe app, with instructions and ingridients",
       github: "https://github.com/mosesfawole/recipe-app",
       live: "https://mf-recipe-app.netlify.app/",
-      technology: "React + Tailwind Css + framer-motion",
+      technology: "React + Tailwind Css + framer-motion + styled-components",
     },
     {
-      title: " Blog App",
-      description: "A simple blog app",
-      github: "https://github.com/mosesfawole/blog-app",
-      live: "https://checkmate.africa/",
-      technology: "React + Json server ",
+      title: " Snap",
+      description: "frontend mentor challenge, with dropdown and sidebar menu",
+      github: "https://mf-snap.netlify.app",
+      live: "https://github.com/mosesfawole/snap",
+      technology: "React + Tailwind Css + HeadlessUi",
+    },
+    {
+      title: " Quiz App",
+      description: "frontend mentor challenge, with dropdown and sidebar menu",
+      github: "https://mf-quiz-app.netlify.app/",
+      live: "https://github.com/mosesfawole/quiz-app",
+      technology: "React + Typescript + styled-components",
     },
   ];
 
@@ -81,22 +88,15 @@ const Home = () => {
         <div className="loader">{<Loader />}</div>
       ) : (
         <>
-          <Header />
-          <div className="mobile md:hidden p-2 mt-2">
-            <div className="flex justify-center">
-              <img src="" alt="Logo" className="" />
-            </div>
-          </div>
           <motion.div
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="grid grid-cols-1  gap-4 md:grid-cols-2"
+            className="grid grid-cols-1  md:gap-4 md:grid-cols-2"
           >
             <HeroText />
-
             <div className="right p-4 hidden md:grid projects md:relative  md:top-20  ">
-              <p className="text-white text-xl font-mono uppercase mb-10 font-bold text-center ">
+              <p className="skills  text-center text-3xl font-semibold text-white">
                 Projects
               </p>
               <div className="hidden md:grid md:grid-cols-2 gap-2 sm:grid-cols-2 shadow-md proj ">

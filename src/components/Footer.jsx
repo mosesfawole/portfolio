@@ -22,7 +22,7 @@ const Footer = () => {
           noreferrer="true"
           className="flex items-center md:opacity-75 md:hover:opacity-100 "
         >
-          <FaTwitter className="md:m-2 mr-2" /> Twitter
+          <FaTwitter className="md:m-2 mr-2" /> Twitter ↗
         </a>
         <a
           rel="noreferrer"
@@ -31,12 +31,12 @@ const Footer = () => {
           noreferrer="true"
           className="flex items-center md:opacity-75 md:hover:opacity-100 "
         >
-          <FaEnvelope className="md:m-2 mr-2" /> Email
+          <FaEnvelope className="md:m-2 mr-2" /> Email ↗
         </a>
       </div>
 
       {/* mobile view */}
-      <div className="md:hidden text-white flex items-center justify-center space-x-6 text-2xl mt-2  ">
+      <div className="md:hidden text-white flex items-center justify-center text-2xl mt-2  ">
         <a
           rel="noreferrer"
           href="https://github.com/mosesfawole"

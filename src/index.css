@@ -39,7 +39,10 @@ body::-webkit-scrollbar {
   background: #1b1b1d;
   font-family: "Indie Flower";
   font-variant-caps: all-small-caps;
-  opacity: 0.9;
+  opacity: 0.7;
+}
+.box .desc {
+  font-family: "Raleway";
 }
 .font-indie {
   font-family: "Indie Flower";
@@ -63,9 +66,17 @@ body::-webkit-scrollbar {
   color: #aaaaab;
 }
 .avatar {
-  vertical-align: middle;
   width: 50px;
   height: 50px;
+  border-radius: 50%;
+}
+.avi {
+  /* width: 250px; */
+  /* height: 150px; */
+}
+.avi img {
+  height: 150px;
+  width: 150px;
   border-radius: 50%;
 }
 .cool-link::after {
@@ -99,15 +110,14 @@ h2 {
   margin: 0;
 }
 .app-menu {
-  width: 0;
+  width: 100%;
 
   height: 100%;
   position: fixed;
   z-index: 2;
   left: 0;
   top: 0;
-  background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.9);
+  background: #1b1b1d;
   overflow-y: hidden;
   transition: 0.5s;
 }
@@ -128,9 +138,10 @@ h2 {
 }
 .closebtn {
   position: absolute;
-  top: 15px;
-  right: 15px;
-  font-size: 30px;
+  top: 20px;
+  right: 20px;
+}
+.closebtn svg {
 }
 .menu-open {
   width: 100%;

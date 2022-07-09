@@ -28,7 +28,9 @@ const Project = ({ details }) => {
         <h4 className="uppercase font-mono font-semibold text-md mb-2 ">
           {technology}
         </h4>
-        <p className="text-md text-slate-400 capitalize  mb-2">{description}</p>
+        <p className="desc text-sm text-gray-50 capitalize  mb-2">
+          {description}
+        </p>
         <div className="flex text-sm   ">
           <span className="icon cursor-pointer transition-all  text-gray-400 hover:text-white">
             <a

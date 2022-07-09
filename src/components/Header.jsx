@@ -4,11 +4,13 @@ import { useState } from "react";
 import { FaAngleDoubleLeft } from "react-icons/fa";
 import { MdMenu, MdCancel } from "react-icons/md";
 const Header = () => {
-  const [isMenu, setisMenu] = useState(false);
+  const [isMenu, setIsMenu] = useState(false);
 
   const openMenu = () => {
-    setisMenu(!isMenu);
-    document.getElementById("menu").style.width = "100%";
+    setIsMenu(!isMenu);
+  };
+  const handleClose = () => {
+    setIsMenu(!isMenu);
   };
   const logoVariants = {
     hidden: { rotate: -180 },
@@ -19,20 +21,20 @@ const Header = () => {
       },
     },
   };
-  const pVariants = {
-    hidden: {
-      opacity: 0,
-      pathLength: 0,
-    },
-    visible: {
-      opacity: 1,
-      pathLength: 1,
-      transition: {
-        duration: 2,
-        ease: "easeInOut",
-      },
-    },
-  };
+  // const pVariants = {
+  //   hidden: {
+  //     opacity: 0,
+  //     pathLength: 0,
+  //   },
+  //   visible: {
+  //     opacity: 1,
+  //     pathLength: 1,
+  //     transition: {
+  //       duration: 2,
+  //       ease: "easeInOut",
+  //     },
+  //   },
+  // };
   return (
     // navbar
     <nav className="">
@@ -54,10 +56,7 @@ const Header = () => {
             }}
             className="pt-2 "
           >
-            <motion.p
-              variants={pVariants}
-              className="text-white text-3xl font-bold"
-            >
+            <motion.p className="text-white text-3xl font-bold cursor-move">
               Mo.dev
             </motion.p>
           </motion.div>
@@ -91,28 +90,40 @@ const Header = () => {
               onClick={openMenu}
             />
 
-            <div id="menu" className="app-menu">
-              <div className="flex closebtn  ">
-                {isMenu ? (
-                  <MdCancel
-                    className="text-4xl text-white "
-                    onClick={() => {
-                      setisMenu(!isMenu);
-                      document.getElementById("menu").style.width = 0;
-                    }}
-                  />
-                ) : (
-                  <FaAngleDoubleLeft />
-                )}
+            <div id="menu" className={isMenu ? "app-menu" : "hidden"}>
+              <div
+                onClick={handleClose}
+                className="flex closebtn font-bold text-white  "
+              >
+                <svg
+                  stroke="#fff"
+                  fill="#fff"
+                  width="26"
+                  height="26"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g fill="#151515" fillRule="evenodd">
+                    <path d="m2.393.98 22.628 22.628-1.414 1.414L.979 2.395z" />
+                    <path d="M.98 23.607 23.609.979l1.414 1.414L2.395 25.021z" />
+                  </g>
+                </svg>
               </div>
               <div className="content text-2xl">
-                <Link to="/">Home</Link>
+                <Link to="/" onClick={handleClose}>
+                  Home
+                </Link>
 
-                <Link to="/projects">Projects</Link>
+                <Link to="/projects" onClick={handleClose}>
+                  Projects
+                </Link>
 
-                <Link to="/info">About Me</Link>
+                <Link to="/info" onClick={handleClose}>
+                  About Me
+                </Link>
 
-                <Link to="/contact">Contact </Link>
+                <Link to="/contact" onClick={handleClose}>
+                  Contact{" "}
+                </Link>
               </div>
             </div>
           </div>
