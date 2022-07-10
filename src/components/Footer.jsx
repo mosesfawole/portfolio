@@ -3,7 +3,7 @@ import Avi from "../image/Banner.jpg";
 const Footer = () => {
   return (
     <>
-      <div className="hidden text-white md:flex items-center text-sm space-x-4 ">
+      <div className="hidden text-white md:flex items-center text-sm  justify-evenly ">
         <div className="">
           <img src={Avi} alt="" className="avatar" />
         </div>
@@ -36,7 +36,7 @@ const Footer = () => {
       </div>
 
       {/* mobile view */}
-      <div className="md:hidden text-white flex items-center justify-center text-2xl mt-2  ">
+      <div className="md:hidden text-white flex items-center justify-evenly text-2xl mt-2  ">
         <a
           rel="noreferrer"
           href="https://github.com/mosesfawole"
@@ -69,7 +69,7 @@ const Footer = () => {
           Inspired by{" "}
           <a
             rel="noreferrer"
-            className=" uppercase text-xs text-gray-100 font-semibold"
+            className=" uppercase text-xs text-gray-300 font-semibold hover:text-white"
             href="https://kadet.dev/"
             target="_blank"
           >

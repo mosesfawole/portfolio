@@ -5,7 +5,7 @@ import { FaAngleDoubleLeft } from "react-icons/fa";
 import { MdMenu, MdCancel } from "react-icons/md";
 const Header = () => {
   const [isMenu, setIsMenu] = useState(false);
-
+  const [active, setActive] = useState(true);
   const openMenu = () => {
     setIsMenu(!isMenu);
   };
@@ -18,6 +18,23 @@ const Header = () => {
       rotate: 0,
       transition: {
         duration: 1,
+      },
+    },
+  };
+  const linkVariants = {
+    hidden: {
+      opacity: 0,
+      scale: "0.5",
+    },
+    visible: {
+      scale: 1.05,
+      opacity: 1,
+      // boxShadow: "0px 0px 8px rgb(255,255,255",
+      textShadow: "0px 0px 8px rgb(255,255,255",
+      transition: {
+        duration: 0.3,
+        repeatType: "reverse",
+        repeat: Infinity,
       },
     },
   };
@@ -40,7 +57,7 @@ const Header = () => {
     <nav className="">
       <motion.div className="mx-auto p-4 ">
         {/* Flex container  */}
-        <div className="flex items-center  justify-between">
+        <div className="flex items-center justify-between md:justify-evenly ">
           {/* Logo */}
 
           <motion.div
@@ -68,18 +85,32 @@ const Header = () => {
             className="hidden space-x-6 md:flex "
           >
             <ul className=" text-white flex items-center space-x-3  transition-all translate-x-2 ">
-              <li className="opacity-90  focus:opacity-100 cool-link">
+              <motion.li
+                onClick={() => setActive(!active)}
+                whileHover={{
+                  scale: 1.05,
+                  opacity: 1,
+                  textShadow: "0px 0px 8px rgb(255,255,255",
+                }}
+                transition={{
+                  duration: 0.3,
+                  repeatType: "reverse",
+                  repeat: 4,
+                }}
+                className={
+                  active
+                    ? "border-l-4 border-indigo-500 "
+                    : "menu-links opacity-90   focus:opacity-100 cool-link"
+                }
+              >
                 <Link to="/">Home</Link>
-              </li>
-              <li className="md:hidden opacity-90  focus:opacity-100 cool-link ">
-                <Link to="/projects">Projects</Link>
+              </motion.li>
+              <li
+                onClick={() => setActive(!active)}
+                className="menu-links opacity-90  focus:opacity-100 cool-link "
+              >
+                <Link to="/info">Resume</Link>
               </li>{" "}
-              <li className="opacity-90  focus:opacity-100 cool-link ">
-                <Link to="/info">About Me</Link>
-              </li>{" "}
-              <li className="opacity-90  focus:opacity-100 cool-link ">
-                <Link to="contact">Contact </Link>
-              </li>
             </ul>
           </motion.div>
 
@@ -119,10 +150,6 @@ const Header = () => {
 
                 <Link to="/info" onClick={handleClose}>
                   About Me
-                </Link>
-
-                <Link to="/contact" onClick={handleClose}>
-                  Contact{" "}
                 </Link>
               </div>
             </div>

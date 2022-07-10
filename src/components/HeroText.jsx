@@ -57,11 +57,16 @@ const HeroText = () => {
             </span>
             , and sometimes work with the{" "}
             <span className="text-gray-100 font-indie font-semibold">
-              backend using the MERN Stack.{" "}
+              backend{" "}
+            </span>{" "}
+            using
+            <span className="text-gray-100 font-indie font-semibold">
+              {" "}
+              the MERN Stack.{" "}
             </span>
           </h2>
           <p className="md:mb-10 mt-1 md:mt-2  ">
-            I create {""}
+            I write{" "}
             <span className="text-gray-100 font-indie font-semibold">
               interactive experiences and responsive web applications
             </span>{" "}

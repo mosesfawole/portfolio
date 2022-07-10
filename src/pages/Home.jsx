@@ -1,6 +1,5 @@
 import { Project, Resume } from "../components";
-import Avi from "../image/Banner.jpg";
-import Header from "../components/Header";
+
 import { motion } from "framer-motion";
 import HeroText from "../components/HeroText";
 import { useEffect, useState } from "react";
@@ -15,8 +14,7 @@ const Home = () => {
   const projects = [
     {
       title: "Syncfusion Dashboard",
-      description:
-        "Functional Dashboard created using Syncfusion ui comonents,tailwind css and reactjs",
+      description: "Functional Dashboard created using Syncfusion ui comonents",
       github: "https://github.com/mosesfawole/syncfusion-dashboard",
       live: "https://syncfusion-dashboard-gamma.vercel.app/",
       technology: "React js + Syncfusion components + Tailwind ",
@@ -30,12 +28,10 @@ const Home = () => {
     },
     {
       title: "Todo App",
-      description:
-        "A todo app with user authentication built with the mern stack, redux template ",
+      description: "A simple todo app with user authentication  ",
       github: "https://github.com/mosesfawole/checkmate",
       live: "https://mf-todo-app.herokuapp.com/login",
-      technology:
-        "MongoDb + Express js + React js + Node js + Redux template + Toastify",
+      technology: "MongoDb + Express js + Node js + React-Redux template ",
     },
     {
       title: "Countries in the world",
@@ -47,24 +43,24 @@ const Home = () => {
 
     {
       title: "Recipe App",
-      description: "Food recipe app, with instructions and ingridients",
+      description: "Food recipe app",
       github: "https://github.com/mosesfawole/recipe-app",
       live: "https://mf-recipe-app.netlify.app/",
       technology: "React + Tailwind Css + framer-motion + styled-components",
     },
     {
       title: " Snap",
-      description: "frontend mentor challenge, with dropdown and sidebar menu",
+      description: "frontend mentor challenge, with dropdown and sidepanel",
       github: "https://mf-snap.netlify.app",
       live: "https://github.com/mosesfawole/snap",
       technology: "React + Tailwind Css + HeadlessUi",
     },
     {
       title: " Quiz App",
-      description: "frontend mentor challenge, with dropdown and sidebar menu",
+      description: "A simple quiz app ",
       github: "https://mf-quiz-app.netlify.app/",
       live: "https://github.com/mosesfawole/quiz-app",
-      technology: "React + Typescript + styled-components",
+      technology: "React-Typescript template + styled-components",
     },
   ];
 
@@ -96,7 +92,7 @@ const Home = () => {
           >
             <HeroText />
             <div className="right p-4 hidden md:grid projects md:relative  md:top-20  ">
-              <p className="skills  text-center text-3xl font-semibold text-white">
+              <p className="skills mb-4 text-center text-3xl font-semibold text-white">
                 Projects
               </p>
               <div className="hidden md:grid md:grid-cols-2 gap-2 sm:grid-cols-2 shadow-md proj ">

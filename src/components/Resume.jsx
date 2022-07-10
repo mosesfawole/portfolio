@@ -1,5 +1,5 @@
 import { FaDownload } from "react-icons/fa";
-
+import Avi from "../image/Banner.jpg";
 const Resume = () => {
   return (
     <div className="right grid resume p-4 md:py-10 md:px-6 ">
@@ -7,8 +7,7 @@ const Resume = () => {
         <p className="text-3xl text-white font-semibold ">Moses Fawole</p>
 
         <span className="text-white flex items-center space-x-1">
-          <a className="flex " href="ddk">
-            {" "}
+          <a className="flex " href={Avi} download>
             <span className="text-sm mr-2">Download</span> <FaDownload />
           </a>
         </span>
@@ -17,10 +16,10 @@ const Resume = () => {
         <p>Frontend Developer</p>
       </div>
       <div className="desc text-gray-400 text-sm  mb-4 ">
-        I'm a frontend web devloper, passionate about building
-        functional,scalable and efficient codes for the best user experiences,
-        I'm a self-taught developer with a passion for learning and
-        strengthening my skills
+        I'm a frontend web devloper,building functional,scalable and efficient
+        code for the best user experiences, Passionate front-end web developer
+        with experience using web technology to build all aspects of the user
+        experience and user interface for client-facing landing pages.
       </div>
       <div className="section">
         <div className="title mb-4">
@@ -45,6 +44,8 @@ const Resume = () => {
             <a
               className="text-white underline font-semibold"
               href="mailto:pharwoleh.dev@gmail.com"
+              rel="noreferrer"
+              target="_blank"
             >
               mail{" "}
             </a>
@@ -52,6 +53,8 @@ const Resume = () => {
             <a
               className="text-white underline font-semibold"
               href="https://twitter.com/pharwoleh"
+              rel="noreferrer"
+              target="_blank"
             >
               dm
             </a>{" "}
