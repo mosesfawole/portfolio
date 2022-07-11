@@ -37,20 +37,20 @@ const HeroText = () => {
   };
   return (
     <div className="">
-      <div className="md:hidden flex justify-center mx-auto  avi">
+      <div className="md:hidden flex justify-center mx-auto mt-4 mb-6 avi">
         <img src={Avi} alt="" className="shadow-md " />
       </div>
       <motion.div
         variants={textVariants}
         hidden="hidden"
         animate="visible"
-        className="hero-text p-8 flex flex-col md:fixed md:top-40  "
+        className="hero-text flex px-4 flex-col md:fixed md:top-40  "
       >
-        <h1 className="md:text-4xl  text-xl mb-4  md:mb-2 font-semibold">
+        <h1 className="md:text-4xl   text-xl mb-4  md:mb-2 font-semibold">
           Hi, I'm Moses Fawole!
         </h1>
         <div className=" text-sm">
-          <h2 className="text-sm md:mt-10  ">
+          <h2 className="text-sm mb-4 md:mt-10  ">
             I'm a{" "}
             <span className="text-gray-100 font-indie font-semibold">
               Frontend Developer
@@ -66,11 +66,15 @@ const HeroText = () => {
             </span>
           </h2>
           <p className="mb-4 md:mb-10 mt-2 md:mt-2  ">
-            I write{" "}
+            I create{" "}
             <span className="text-gray-100 font-indie font-semibold">
-              interactive experiences and responsive web applications
+              interactive experiences
             </span>{" "}
-            technologies
+            and{" "}
+            <span className="text-gray-100 font-indie font-semibold">
+              responsive
+            </span>{" "}
+            web applications using modern technology
             <br /> I'm{" "}
             <span className="text-white font-indie font-semibold">
               currently learning{" "}
@@ -79,7 +83,7 @@ const HeroText = () => {
             <br />
           </p>
         </div>
-        <div className="buttons mb-4  md:hidden flex justify-center">
+        <div className="buttons mb-12 mt-4  md:hidden flex justify-center">
           <motion.button
             variants={buttonVariants}
             hidden="hidden"
@@ -87,7 +91,7 @@ const HeroText = () => {
             className="button flex text-gray-200 px-3 py-2 rounded-md "
           >
             <Link
-              className="flex items-center text-sm font-semibold"
+              className="flex items-center text-md font-semibold"
               to="/projects"
             >
               Explore <FaArrowRight className="ml-2 items-center" />

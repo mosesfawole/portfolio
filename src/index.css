@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&family=Poppins:  sans-serifwght@300&display=swap");
 
 * {
   margin: 0;
@@ -40,16 +41,16 @@ body::-webkit-scrollbar {
 }
 .box {
   background: #1b1b1d;
-  font-family: "Indie Flower";
+  font-family: "Poppins" sans-serif sans-serif;
   font-variant-caps: all-small-caps;
   opacity: 0.7;
 }
 .box .desc {
   font-family: "Raleway";
 }
-.font-indie {
-  font-family: "Indie Flower";
-}
+/* .font-indie {
+  font-family: "Poppins"  sans-serif;
+} */
 .box:hover {
   transition: all 0.2s ease-in-out;
   opacity: 1 !important;
@@ -72,6 +73,9 @@ body::-webkit-scrollbar {
   width: 50px;
   height: 50px;
   border-radius: 50%;
+}
+.font-indie {
+  font-family: cursive;
 }
 
 .avi img {
@@ -135,7 +139,7 @@ h2 {
   text-decoration: none;
   cursor: pointer;
   width: fit-content;
-  /* font-family: "Indie Flower"; */
+  /* font-family: "Poppins"  sans-serif; */
   font-variant-caps: all-small-caps;
 }
 
@@ -149,10 +153,14 @@ h2 {
   border-left: 4px;
 }
 .skills {
-  font-family: "Indie Flower";
+  font-family: "Poppins" sans-serif;
   font-variant-caps: all-small-caps;
 }
-@media (min-width: 768px) {
+@media (min-width: 900px) {
+  #root {
+    height: 100vh;
+    overflow-y: auto;
+  }
   .projects {
     left: 100%;
   }

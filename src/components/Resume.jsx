@@ -4,9 +4,9 @@ const Resume = () => {
   return (
     <div className="right grid resume p-4 md:py-10 md:px-6 ">
       <div className="flex justify-between ">
-        <p className="text-3xl text-white font-semibold ">Moses Fawole</p>
+        <p className="text-2xl text-white font-semibold ">Moses Fawole</p>
 
-        <span className="text-white flex items-center space-x-1">
+        <span className="text-white flex items-center space-x-4">
           <a
             className="flex "
             title="Click to download resume"

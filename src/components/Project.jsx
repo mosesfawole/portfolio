@@ -27,7 +27,7 @@ const Project = ({ details }) => {
       className=" cursor-default items-center"
     >
       <div className="box text-white p-8 shadow-md ">
-        <h3 className="text-3xl font-semibold mb-2">{title}</h3>
+        <h3 className="text-2xl font-semibold mb-2">{title}</h3>
         <h4 className="uppercase font-mono font-semibold text-md mb-2 ">
           {technology}
         </h4>

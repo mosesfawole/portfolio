@@ -1,4 +1,11 @@
-import { FaEnvelope, FaGithub, FaTwitter } from "react-icons/fa";
+import {
+  FaArrowRight,
+  FaEnvelope,
+  FaGithub,
+  FaLongArrowAltRight,
+  FaRegPaperPlane,
+  FaTwitter,
+} from "react-icons/fa";
 import Avi from "../image/Banner.jpg";
 const Footer = () => {
   return (
@@ -38,8 +45,8 @@ const Footer = () => {
       </div>
 
       {/* mobile view */}
-      <div className="md:hidden text-white flex flex-col items-center  text-2xl   ">
-        <div className="flex-row flex space-x-4 mt-4">
+      <div className="md:hidden  text-white flex flex-col items-center  text-2xl   ">
+        <div className="flex-row flex  space-x-4 mb-2 mt-4">
           <a
             rel="noreferrer"
             href="https://github.com/mosesfawole"
@@ -67,16 +74,20 @@ const Footer = () => {
             <FaEnvelope className="md:m-2 mr-2" />
           </a>
         </div>
-        <div className="text-center text-sm mt-4 text-gray-400  md:text-start ">
-          <p className=" p-2">
+        <div className="text-center flex text-sm  text-gray-400  md:text-start ">
+          <p className=" p-2 flex">
             Inspired by{" "}
             <a
               rel="noreferrer"
-              className=" uppercase text-xs text-gray-300 font-semibold hover:text-white"
+              className=" uppercase text-xs flex ml-2 items-center text-gray-300 font-semibold hover:text-white"
               href="https://kadet.dev/"
               target="_blank"
             >
-              Kadet ↗
+              Kadet
+              <span className="flex">
+                {" "}
+                <FaRegPaperPlane />
+              </span>
             </a>
           </p>
         </div>

@@ -125,7 +125,7 @@ const Projects = () => {
             </button>
           </div>
         </div>
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </>
   );
