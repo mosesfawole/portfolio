@@ -53,7 +53,7 @@ const HeroText = () => {
           <h2 className="text-sm md:mt-10  ">
             I'm a{" "}
             <span className="text-gray-100 font-indie font-semibold">
-              Frontend Web Developer
+              Frontend Developer
             </span>
             , and sometimes work with the{" "}
             <span className="text-gray-100 font-indie font-semibold">
