@@ -1,5 +1,5 @@
 import { FaDownload } from "react-icons/fa";
-import Avi from "../image/Banner.jpg";
+import resume from "../file/resume.pdf";
 const Resume = () => {
   return (
     <div className="right grid resume p-4 md:py-10 md:px-6 ">
@@ -7,7 +7,12 @@ const Resume = () => {
         <p className="text-3xl text-white font-semibold ">Moses Fawole</p>
 
         <span className="text-white flex items-center space-x-1">
-          <a className="flex " href={Avi} download>
+          <a
+            className="flex "
+            title="Click to download resume"
+            href={resume}
+            download="mosesfawole"
+          >
             <span className="text-sm mr-2">Download</span> <FaDownload />
           </a>
         </span>

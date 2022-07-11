@@ -5,14 +5,17 @@ const Project = ({ details }) => {
   const containerVariants = {
     hidden: {
       opacity: 0,
-      x: "-100vw",
+      x: "100vw",
     },
     visible: {
       opacity: 1,
       x: 0,
       transition: {
-        delay: 0.2,
-        type: "string",
+        duration: 1,
+        type: "spring",
+        stiffness: 100,
+        when: "beforeChildren",
+        ease: "easeInOut",
       },
     },
   };

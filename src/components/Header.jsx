@@ -59,7 +59,9 @@ const Header = () => {
         {/* Flex container  */}
         <div className="flex items-center justify-between md:justify-evenly ">
           {/* Logo */}
-
+          <p className="md:hidden text-white text-3xl font-bold">
+            <Link to="/">Mo.dev</Link>
+          </p>
           <motion.div
             variants={logoVariants}
             initial="hidden"
@@ -73,9 +75,9 @@ const Header = () => {
             }}
             className="pt-2 "
           >
-            <motion.p className="text-white text-3xl font-bold cursor-move">
+            <p className="hidden md:flex text-white text-3xl font-bold cursor-move">
               Mo.dev
-            </motion.p>
+            </p>
           </motion.div>
           {/* Menu items */}
           <motion.div
@@ -84,30 +86,20 @@ const Header = () => {
             transition={{ delay: 0.6, type: "string", stiffness: 500 }}
             className="hidden space-x-6 md:flex "
           >
-            <ul className=" text-white flex items-center space-x-3  transition-all translate-x-2 ">
+            <ul className=" text-white flex items-center space-x-5 ">
               <motion.li
                 onClick={() => setActive(!active)}
-                whileHover={{
-                  scale: 1.05,
-                  opacity: 1,
-                  textShadow: "0px 0px 8px rgb(255,255,255",
-                }}
-                transition={{
-                  duration: 0.3,
-                  repeatType: "reverse",
-                  repeat: 4,
-                }}
-                className={
-                  active
-                    ? "border-l-4 border-indigo-500 "
-                    : "menu-links opacity-90   focus:opacity-100 cool-link"
-                }
+                className={active ? "border-l-4 border-indigo-500 " : "  "}
               >
                 <Link to="/">Home</Link>
               </motion.li>
               <li
-                onClick={() => setActive(!active)}
-                className="menu-links opacity-90  focus:opacity-100 cool-link "
+                onClick={() => setActive(false)}
+                className={
+                  active
+                    ? "opacity:70"
+                    : "border-l-4 opacity:100 border-indigo-500"
+                }
               >
                 <Link to="/info">Resume</Link>
               </li>{" "}
@@ -115,7 +107,7 @@ const Header = () => {
           </motion.div>
 
           {/* Mobile menu  */}
-          <div className="md:hidden flex">
+          <div className="md:hidden px-4 flex">
             <MdMenu
               className={isMenu ? "hidden" : "flex text-white text-3xl t"}
               onClick={openMenu}

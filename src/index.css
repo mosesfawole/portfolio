@@ -20,6 +20,9 @@ body {
 #root {
   height: 100vh;
 }
+#projects {
+  overflow-x: hidden;
+}
 /* Hide scrollbar for Chrome, Safari and Opera */
 body::-webkit-scrollbar {
   display: none;
@@ -70,31 +73,12 @@ body::-webkit-scrollbar {
   height: 50px;
   border-radius: 50%;
 }
-.avi {
-  /* width: 250px; */
-  /* height: 150px; */
-}
+
 .avi img {
-  height: 150px;
-  width: 150px;
+  height: 200px;
+  width: 200px;
   border-radius: 50%;
 }
-/* .cool-link::after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 2px;
-  background: gray;
-  transition: width 0.5s;
-}
-
-.cool-link:active::after {
-  width: 100%;
-}
-
-.cool-link:hover::after {
-  width: 100%;
-} */
 
 h1 {
   font-size: 40px;
@@ -158,8 +142,11 @@ h2 {
 .menu-links {
   opacity: 0.5;
   padding: 5%;
+  border-left: 0px;
+  transition: all 5s ease-in-out;
 }
-.resume {
+.menu-links:active {
+  border-left: 4px;
 }
 .skills {
   font-family: "Indie Flower";

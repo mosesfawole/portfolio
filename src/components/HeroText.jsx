@@ -36,7 +36,7 @@ const HeroText = () => {
     },
   };
   return (
-    <div className="p-4">
+    <div className="">
       <div className="md:hidden flex justify-center mx-auto  avi">
         <img src={Avi} alt="" className="shadow-md " />
       </div>
@@ -73,9 +73,9 @@ const HeroText = () => {
             technologies
             <br /> I'm{" "}
             <span className="text-white font-indie font-semibold">
-              learning{" "}
+              currently learning{" "}
             </span>
-            the MERN Stack and various skills.
+            the MERN Stack.
             <br />
           </p>
         </div>

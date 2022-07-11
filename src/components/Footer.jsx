@@ -3,36 +3,38 @@ import Avi from "../image/Banner.jpg";
 const Footer = () => {
   return (
     <>
-      <div className="hidden text-white md:flex items-center text-sm  justify-evenly ">
+      <div className="hidden text-white md:flex   ">
         <div className="">
           <img src={Avi} alt="" className="avatar" />
         </div>
-        <a
-          rel="noreferrer"
-          href="https://github.com/mosesfawole"
-          target="_blank"
-          className="flex items-center md:opacity-75 md:hover:opacity-100 "
-        >
-          <FaGithub className=" md:m-2 mr-2" /> Github ↗
-        </a>
-        <a
-          rel="noreferrer"
-          href="https://twitter.com/Pharwolehh"
-          target="_blank"
-          noreferrer="true"
-          className="flex items-center md:opacity-75 md:hover:opacity-100 "
-        >
-          <FaTwitter className="md:m-2 mr-2" /> Twitter ↗
-        </a>
-        <a
-          rel="noreferrer"
-          href="mailto:pharwoleh.dev@gmail.com"
-          target="_blank"
-          noreferrer="true"
-          className="flex items-center md:opacity-75 md:hover:opacity-100 "
-        >
-          <FaEnvelope className="md:m-2 mr-2" /> Email ↗
-        </a>
+        <div className="flex items-center justify-center text-sm space-x-4">
+          <a
+            rel="noreferrer"
+            href="https://github.com/mosesfawole"
+            target="_blank"
+            className="flex items-center md:opacity-75 md:hover:opacity-100 "
+          >
+            <FaGithub className=" md:m-2 mr-2" /> Github ↗
+          </a>
+          <a
+            rel="noreferrer"
+            href="https://twitter.com/Pharwolehh"
+            target="_blank"
+            noreferrer="true"
+            className="flex items-center md:opacity-75 md:hover:opacity-100 "
+          >
+            <FaTwitter className="md:m-2 mr-2" /> Twitter ↗
+          </a>
+          <a
+            rel="noreferrer"
+            href="mailto:pharwoleh.dev@gmail.com"
+            target="_blank"
+            noreferrer="true"
+            className="flex items-center md:opacity-75 md:hover:opacity-100 "
+          >
+            <FaEnvelope className="md:m-2 mr-2" /> Email ↗
+          </a>
+        </div>
       </div>
 
       {/* mobile view */}

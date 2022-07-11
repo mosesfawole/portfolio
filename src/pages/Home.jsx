@@ -7,9 +7,7 @@ import Loader from "../components/Loader";
 const Home = () => {
   const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 3000);
+    setIsLoading(false);
   }, []);
   const projects = [
     {
@@ -64,20 +62,6 @@ const Home = () => {
     },
   ];
 
-  const containerVariants = {
-    hidden: {
-      opacity: 0,
-    },
-    visible: {
-      opacity: 1,
-      transition: {
-        delay: 0.5,
-        duration: 0.5,
-        staggerChildren: 0.2,
-        when: "beforeChildren",
-      },
-    },
-  };
   return (
     <div className="">
       {isLoading ? (
@@ -85,13 +69,12 @@ const Home = () => {
       ) : (
         <>
           <motion.div
-            variants={containerVariants}
             initial="hidden"
             animate="visible"
             className="grid grid-cols-1  md:gap-4 md:grid-cols-2"
           >
             <HeroText />
-            <div className="right p-4 hidden md:grid projects md:relative  md:top-20  ">
+            <div className="right p-4 hidden md:grid projects mt-20  md:top-20  ">
               <p className="skills mb-4 text-center text-3xl font-semibold text-white">
                 Projects
               </p>
