@@ -71,7 +71,7 @@ const Projects = () => {
   const containerVariants = {
     hidden: {
       opacity: 0,
-      x: "100vh",
+      x: "100vw",
     },
     visible: {
       opacity: 1,

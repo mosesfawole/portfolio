@@ -36,8 +36,8 @@ const HeroText = () => {
     },
   };
   return (
-    <>
-      <div className="md:hidden flex mx-auto avi">
+    <div className="p-4">
+      <div className="md:hidden flex justify-center mx-auto  avi">
         <img src={Avi} alt="" className="shadow-md " />
       </div>
       <motion.div
@@ -46,7 +46,7 @@ const HeroText = () => {
         animate="visible"
         className="hero-text p-8 flex flex-col md:fixed md:top-40  "
       >
-        <h1 className="md:text-4xl  text-xl  md:mb-2 font-semibold">
+        <h1 className="md:text-4xl  text-xl mb-4  md:mb-2 font-semibold">
           Hi, I'm Moses Fawole!
         </h1>
         <div className=" text-sm">
@@ -65,7 +65,7 @@ const HeroText = () => {
               the MERN Stack.{" "}
             </span>
           </h2>
-          <p className="md:mb-10 mt-1 md:mt-2  ">
+          <p className="mb-4 md:mb-10 mt-2 md:mt-2  ">
             I write{" "}
             <span className="text-gray-100 font-indie font-semibold">
               interactive experiences and responsive web applications
@@ -79,7 +79,7 @@ const HeroText = () => {
             <br />
           </p>
         </div>
-        <div className="buttons md:hidden flex justify-center">
+        <div className="buttons mb-4  md:hidden flex justify-center">
           <motion.button
             variants={buttonVariants}
             hidden="hidden"
@@ -94,11 +94,11 @@ const HeroText = () => {
             </Link>
           </motion.button>
         </div>
-        <div className="mt-4 md:mt-10 ">
+        <div className=" md:mt-10 ">
           <Footer />
         </div>
       </motion.div>
-    </>
+    </div>
   );
 };
 
