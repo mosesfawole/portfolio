@@ -42,7 +42,6 @@ const Footer = () => {
             rel="noreferrer"
             href="https://github.com/mosesfawole"
             target="_blank"
-            lang
             className="flex items-center md:opacity-75 md:hover:opacity-100 "
           >
             <FaGithub className=" md:m-2 mr-2" />
