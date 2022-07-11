@@ -77,9 +77,12 @@ const Projects = () => {
       opacity: 1,
       x: 0,
       transition: {
-        type: "spring",
+        duration: 1,
         delay: 0.5,
+        type: "spring",
+        stiffness: 100,
         when: "beforeChildren",
+        ease: "easeInOut",
       },
     },
   };
