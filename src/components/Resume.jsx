@@ -17,11 +17,11 @@ const Resume = () => {
           </a>
         </span>
       </div>
-      <div className="text-white mb-4">
+      <div className="text-gray-300 font-semibold mb-4">
         <p>Frontend Developer</p>
       </div>
-      <div className="desc text-gray-400 text-sm  mb-4 ">
-        I'm a frontend web devloper,building functional,scalable and efficient
+      <div className="desc text-gray-400 text-sm mb-4 ">
+        I'm a frontend web devloper, building functional,scalable and efficient
         code for the best user experiences, Passionate front-end web developer
         with experience using web technology to build all aspects of the user
         experience and user interface for client-facing landing pages.
@@ -31,14 +31,14 @@ const Resume = () => {
           <p className="text-white font-semibold mb-2">Core Technologies :</p>
           <p className=" text-xs text-gray-400 uppercase  ">
             HTML/CSS, Javascript , React JS, Tailwind CSS, Next JS, Bootstrap
-            Node js,Git ,Github
+            Node js, Git , Github
           </p>
         </div>
         <div className="title mb-2">
           <p className="text-white font-semibold mb-4">Familiar with :</p>
           <p className=" text-xs text-gray-400 uppercase">
             MongoDb, Express Js, Vue js, Graphql, Sanity, unit testing ,
-            Material-Ui,Redux, Framer motion,React-Native
+            Material-Ui, Redux, Framer motion, React-Native
           </p>
         </div>
         <hr />

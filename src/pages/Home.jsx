@@ -1,9 +1,10 @@
-import { Project, Resume } from "../components";
+import { Footer, Header, Project, Resume } from "../components";
 
 import { motion } from "framer-motion";
 import HeroText from "../components/HeroText";
 import { useEffect, useState } from "react";
 import Loader from "../components/Loader";
+import Explore from "../components/Explore";
 const Home = () => {
   const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
@@ -41,7 +42,7 @@ const Home = () => {
 
     {
       title: "Recipe App",
-      description: "Food recipe app",
+      description: "Food recipe app ",
       github: "https://github.com/mosesfawole/recipe-app",
       live: "https://mf-recipe-app.netlify.app/",
       technology: "React + Tailwind Css + framer-motion + styled-components",
@@ -63,33 +64,36 @@ const Home = () => {
   ];
 
   return (
-    <div className="">
+    <>
       {isLoading ? (
         <div className="loader">{<Loader />}</div>
       ) : (
-        <>
+        <div className="">
           <motion.div
-            initial="hidden"
+            initial="hidden "
             animate="visible"
-            className="grid grid-cols-1  md:gap-4 md:grid-cols-2"
+            className=" md:grid md:grid-cols-2"
           >
-            <HeroText />
-            <div className="right p-4 hidden md:grid projects mt-20  md:top-20  ">
-              <p className="skills mb-4 text-center text-3xl font-semibold text-white">
-                Projects
-              </p>
-              <div className="hidden md:grid md:grid-cols-2 gap-2 sm:grid-cols-2 shadow-md proj ">
-                {projects.map((project, index) => (
-                  <div key={index} className="">
-                    <Project details={project} />
-                  </div>
-                ))}
-              </div>
+            <div className="md:fixed md:w-1/2">
+              <HeroText />
+              <Explore />
             </div>
+            <motion.div initial="hidden" animate="visible" className=" ">
+              <div className="hidden relative right md:grid ">
+                <p className="text-white">Projects</p>
+                <div className="md:grid md:grid-cols-2 md:gap-4 ">
+                  {projects.map((project, index) => (
+                    <div key={index} className="">
+                      <Project details={project} />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
           </motion.div>
-        </>
+        </div>
       )}
-    </div>
+    </>
   );
 };
 

@@ -54,12 +54,12 @@ const Header = () => {
   // };
   return (
     // navbar
-    <nav className="">
+    <div className="">
       <motion.div className="mx-auto p-4 ">
         {/* Flex container  */}
         <div className="flex items-center justify-between md:justify-evenly ">
           {/* Logo */}
-          <p className="md:hidden text-white text-3xl font-bold">
+          <p className="md:hidden text-white text-3xl font-rale font-bold">
             <Link to="/">Mo.dev</Link>
           </p>
           <motion.div
@@ -75,7 +75,7 @@ const Header = () => {
             }}
             className="pt-2 "
           >
-            <p className="hidden md:flex text-white text-3xl font-bold cursor-move">
+            <p className="hidden md:flex text-white text-3xl font-rale font-bold cursor-move">
               Mo.dev
             </p>
           </motion.div>
@@ -107,9 +107,9 @@ const Header = () => {
           </motion.div>
 
           {/* Mobile menu  */}
-          <div className="md:hidden px-4 flex">
+          <div className="md:hidden">
             <MdMenu
-              className={isMenu ? "hidden" : "flex text-white text-3xl t"}
+              className={isMenu ? "" : "text-white text-3xl"}
               onClick={openMenu}
             />
 
@@ -148,7 +148,7 @@ const Header = () => {
           </div>
         </div>
       </motion.div>
-    </nav>
+    </div>
   );
 };
 

@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import HeroText from "../components/HeroText";
 const Projects = () => {
   let navigate = useNavigate();
   useEffect(() => {
@@ -95,7 +96,7 @@ const Projects = () => {
           animate="visible"
           className="right grid projects"
         >
-          <p className="skills mb-10 text-center text-3xl font-semibold text-white">
+          <p className="mb-10 skills text-center text-2xl   text-white">
             Projects
           </p>
 
@@ -125,7 +126,6 @@ const Projects = () => {
             </button>
           </div>
         </div>
-        <Footer />
       </div>
     </>
   );

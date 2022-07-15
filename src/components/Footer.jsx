@@ -10,11 +10,11 @@ import Avi from "../image/Banner.jpg";
 const Footer = () => {
   return (
     <>
-      <div className="hidden text-white md:flex   ">
+      <div className="hidden  text-white md:flex   ">
         <div className="">
           <img src={Avi} alt="" className="avatar" />
         </div>
-        <div className="flex items-center justify-center text-sm space-x-4">
+        <div className="flex foot items-center justify-center text-sm space-x-4">
           <a
             rel="noreferrer"
             href="https://github.com/mosesfawole"
@@ -37,7 +37,7 @@ const Footer = () => {
             href="mailto:pharwoleh.dev@gmail.com"
             target="_blank"
             noreferrer="true"
-            className="flex items-center md:opacity-75 md:hover:opacity-100 "
+            className="flex items-center md:opacity-75 hover:opacity-100 "
           >
             <FaEnvelope className="md:m-2 mr-2" /> Email ↗
           </a>

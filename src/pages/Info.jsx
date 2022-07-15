@@ -58,9 +58,7 @@ const Info = () => {
           </button>
         </div>
       </div>
-      <div className="md:hidden">
-        <Footer />
-      </div>
+      <div className="md:hidden"></div>
     </div>
   );
 };

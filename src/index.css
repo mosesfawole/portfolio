@@ -4,6 +4,7 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Raleway&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&family=Poppins:  sans-serifwght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Arima:wght@500&display=swap");
 
 * {
   margin: 0;
@@ -12,21 +13,23 @@
 }
 
 body {
-  font-family: "Raleway", sans-serif;
   transition: 0.4;
   background: #151515;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
-#root {
-  height: 100vh;
+
+.home {
+  display: flex;
 }
-#projects {
-  overflow-x: hidden;
-}
+
 /* Hide scrollbar for Chrome, Safari and Opera */
 body::-webkit-scrollbar {
   display: none;
+  /* Hide scrollbar for IE, Edge and Firefox */
+  background: #151515;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -34,40 +37,39 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-/* Hide scrollbar for IE, Edge and Firefox */
-.right {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+.font-rale {
+  font-family: "Raleway", sans-serif;
+}
+#projects {
 }
 .box {
   background: #1b1b1d;
-  font-family: "Poppins" sans-serif sans-serif;
-  font-variant-caps: all-small-caps;
+  font-family: "Arima", sans-serif;
   opacity: 0.7;
 }
 .box .desc {
+  font-variant-caps: all-small-caps;
   font-family: "Raleway";
 }
-/* .font-indie {
-  font-family: "Poppins"  sans-serif;
-} */
+.box .tech {
+  font-family: "Raleway";
+  font-variant-caps: all-small-caps;
+}
+.font-arima {
+  font-family: "Arima", sans-serif;
+}
 .box:hover {
-  transition: all 0.2s ease-in-out;
-  opacity: 1 !important;
+  transition: all 0.3s ease-in-out;
   transform: scale(1.1);
+  opacity: 1 !important;
 }
 .icon {
   transition: all 0.3s ease-in-out;
 }
 
-.cool-link {
-  display: inline-block;
-
-  text-decoration: none;
-}
 .hero-text {
-  right: 60%;
-  color: #aaaaab;
+  font-family: "Raleway", sans-serif;
+  color: #99999d;
 }
 .avatar {
   width: 50px;
@@ -75,13 +77,24 @@ body::-webkit-scrollbar {
   border-radius: 50%;
 }
 .font-indie {
-  font-family: cursive;
+  font-family: "Arima";
+  opacity: 0.9;
+}
+.icon {
+  font-family: "Indie Flower";
 }
 
 .avi img {
   height: 200px;
   width: 200px;
   border-radius: 50%;
+}
+.wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -160,6 +173,9 @@ h2 {
   #root {
     height: 100vh;
     overflow-y: auto;
+  }
+  .right {
+    left: 90%;
   }
   .projects {
     left: 100%;
