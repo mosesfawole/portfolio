@@ -5,13 +5,13 @@ const Project = ({ details }) => {
   const containerVariants = {
     hidden: {
       opacity: 0,
-      x: "100vw",
+      y: "-100vh",
     },
     visible: {
       opacity: 1,
-      x: 0,
+      y: 0,
       transition: {
-        duration: 1,
+        duration: 0.2,
         type: "spring",
         stiffness: 100,
         when: "beforeChildren",
@@ -28,11 +28,11 @@ const Project = ({ details }) => {
     >
       <div className="box p-8   rounded-lg   text-white  shadow-lg ">
         <h3 className="text-2xl font-arima  font-semibold mb-2">{title}</h3>
-        <h4 className="uppercase tech font-mono font-semibold text-md mb-2 ">
+        <h4 className="uppercase tech font-mono font-semibold text-xs mb-2 ">
           {technology}
         </h4>
-        <p className="desc text-md text-gray-50   mb-2">{description}</p>
-        <div className="flex text-sm   ">
+        <p className="desc text-sm text-gray-50   mb-2">{description}</p>
+        <div className="flex text-xs  ">
           <span className="icon   text-gray-400 hover:text-white">
             <a
               title="Live preview"

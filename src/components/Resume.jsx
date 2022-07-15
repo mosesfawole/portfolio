@@ -2,7 +2,7 @@ import { FaDownload } from "react-icons/fa";
 import resume from "../file/resume.pdf";
 const Resume = () => {
   return (
-    <div className="right grid resume p-4 md:py-10 md:px-6 ">
+    <div className=" grid resume p-4 md:py-10 md:px-6 ">
       <div className="flex justify-between ">
         <p className="text-2xl text-white font-semibold ">Moses Fawole</p>
 

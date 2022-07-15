@@ -84,14 +84,19 @@ const Header = () => {
             initial={{ y: -250 }}
             animate={{ y: 0 }}
             transition={{ delay: 0.6, type: "string", stiffness: 500 }}
-            className="hidden space-x-6 md:flex "
+            className="hidden text-xl space-x-6 font-arima md:flex "
           >
-            <ul className=" text-white flex items-center space-x-5 ">
+            <ul className=" text-white flex items-center space-x-5  ">
               <motion.li
                 onClick={() => setActive(!active)}
                 className={active ? "border-l-4 border-indigo-500 " : "  "}
               >
-                <Link to="/">Home</Link>
+                <Link
+                  className="li opacity-70 hover:opacity-100 items-center"
+                  to="/"
+                >
+                  Home
+                </Link>
               </motion.li>
               <li
                 onClick={() => setActive(false)}
@@ -101,7 +106,9 @@ const Header = () => {
                     : "border-l-4 opacity:100 border-indigo-500"
                 }
               >
-                <Link to="/info">Resume</Link>
+                <Link className="li opacity-70 hover:opacity-100" to="/info">
+                  Resume
+                </Link>
               </li>{" "}
             </ul>
           </motion.div>

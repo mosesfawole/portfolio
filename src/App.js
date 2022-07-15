@@ -17,7 +17,9 @@ function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-        <Footer />
+        <div className="md:hidden">
+          <Footer />
+        </div>
       </div>
     </>
   );

@@ -9,9 +9,6 @@ import HeroText from "../components/HeroText";
 const Projects = () => {
   let navigate = useNavigate();
   useEffect(() => {
-        // 👇️ scroll to top on page load
-        window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
-
     if (window.screen.width > 768) {
       navigate("/");
     }
@@ -70,34 +67,11 @@ const Projects = () => {
     },
   ];
 
-  const containerVariants = {
-    hidden: {
-      opacity: 0,
-      x: "100vw",
-    },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        duration: 1,
-        delay: 0.5,
-        type: "spring",
-        stiffness: 100,
-        when: "beforeChildren",
-        ease: "easeInOut",
-      },
-    },
-  };
   return (
-    <>
-      <div id="projects" className="md:hidden cursor-default items-center">
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          className="right grid projects"
-        >
-          <p className="mb-10 skills text-center text-2xl   text-white">
+    <div className="">
+      <div id="projects" className=" cursor-default items-center">
+        <div className="right grid projects">
+          <p className="mb-10 skills font-arima text-center text-2xl   text-white">
             Projects
           </p>
 
@@ -108,7 +82,7 @@ const Projects = () => {
               </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         <div className="flex justify-evenly  md:hidden mt-6 mb-4">
           <div className="buttons  ">
@@ -128,7 +102,7 @@ const Projects = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

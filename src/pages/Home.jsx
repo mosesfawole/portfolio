@@ -70,15 +70,18 @@ const Home = () => {
           <motion.div
             initial="hidden "
             animate="visible"
-            className=" md:grid md:grid-cols-2"
+            className=" md:grid  md:grid-cols-2"
           >
             <div className="md:fixed md:w-1/2">
               <HeroText />
               <Explore />
+              <Footer />
             </div>
             <motion.div initial="hidden" animate="visible" className=" ">
-              <div className="hidden relative right md:grid ">
-                <p className="text-white">Projects</p>
+              <div className="hidden relative md:top-20 right md:grid ">
+                <p className="mb-4 font-arima uppercase text-center text-white">
+                  Projects
+                </p>
                 <div className="md:grid md:grid-cols-2 md:gap-4 ">
                   {projects.map((project, index) => (
                     <div key={index} className="">

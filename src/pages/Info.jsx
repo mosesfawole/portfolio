@@ -6,10 +6,6 @@ import { motion } from "framer-motion";
 import { Resume } from "../components";
 import { useEffect } from "react";
 const Info = () => {
-  useEffect(() => {
-      // 👇️ scroll to top on page load
-      window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
-  });
   const containerVariants = {
     hidden: {
       y: "-100vh",
@@ -30,6 +26,7 @@ const Info = () => {
       <div className="grid md:grid-cols-2 p-4">
         <div className="hidden md:block">
           <HeroText />
+          <Footer />
         </div>
         <motion.div
           variants={containerVariants}
@@ -37,7 +34,7 @@ const Info = () => {
           animate="visible"
           className="p-2 md:relative md:top-10 "
         >
-          <p className="skills mb-10 text-center text-3xl font-semibold text-white">
+          <p className="mb-4 skills font-arima text-center text-2xl   text-white">
             Resume
           </p>
           <Resume />

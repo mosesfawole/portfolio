@@ -10,7 +10,7 @@ import Avi from "../image/Banner.jpg";
 const Footer = () => {
   return (
     <>
-      <div className="hidden  text-white md:flex   ">
+      <div className="hidden md:p-8  text-white md:flex   ">
         <div className="">
           <img src={Avi} alt="" className="avatar" />
         </div>

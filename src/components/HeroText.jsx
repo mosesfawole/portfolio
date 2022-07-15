@@ -28,7 +28,7 @@ const HeroText = () => {
       <div className="md:hidden flex  justify-center avi">
         <img src={Avi} alt="" className="shadow-md " />
       </div>
-      <div className=" flex hero-text flex-col text-sm text-center  md:px-0 md:text-start text-gray-400 ">
+      <div className=" flex hero-text flex-col text-sm text-center md:mt-10  md:px-0 md:text-start text-gray-400 ">
         <h1 className=" text-3xl text-white mb-2 ">Hi, I'm Moses Fawole</h1>
         <h2 className=" text-sm mb-3 md:mt-10  ">
           I'm a{" "}
