@@ -7,9 +7,7 @@ import Loader from "../components/Loader";
 import Explore from "../components/Explore";
 const Home = () => {
   const [isLoading, setIsLoading] = useState(false);
-  useEffect(() => {
-    setIsLoading(false);
-  }, []);
+
   const projects = [
     {
       title: "Syncfusion Dashboard",

@@ -9,12 +9,13 @@ import HeroText from "../components/HeroText";
 const Projects = () => {
   let navigate = useNavigate();
   useEffect(() => {
-    window.scrollTo(0, 0);
+        // 👇️ scroll to top on page load
+        window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
 
     if (window.screen.width > 768) {
       navigate("/");
     }
-  }, [navigate]);
+  }, []);
   const projects = [
     {
       title: "Syncfusion Dashboard",
