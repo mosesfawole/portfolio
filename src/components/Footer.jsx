@@ -1,8 +1,6 @@
 import {
-  FaArrowRight,
   FaEnvelope,
   FaGithub,
-  FaLongArrowAltRight,
   FaRegPaperPlane,
   FaTwitter,
 } from "react-icons/fa";
@@ -75,16 +73,16 @@ const Footer = () => {
           </a>
         </div>
         <div className="text-center flex text-sm  text-gray-400  md:text-start ">
-          <p className=" p-2 flex">
+          <p className=" p-2 flex items-center ">
             Inspired by{" "}
             <a
               rel="noreferrer"
-              className=" uppercase text-xs flex ml-2 items-center text-gray-300 font-semibold hover:text-white"
+              className=" text-xs flex  items- ml-1 text-gray-300 font-semibold hover:text-white"
               href="https://kadet.dev/"
               target="_blank"
             >
-              Kadet
-              <span className="flex">
+              Kadet{""}
+              <span className="flex ml-1">
                 {" "}
                 <FaRegPaperPlane />
               </span>

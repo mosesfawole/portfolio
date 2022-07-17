@@ -66,7 +66,7 @@ const Home = () => {
       {isLoading ? (
         <div className="loader">{<Loader />}</div>
       ) : (
-        <div className="">
+        <div className="flex">
           <motion.div
             initial="hidden "
             animate="visible"
@@ -75,7 +75,9 @@ const Home = () => {
             <div className="md:fixed md:w-1/2">
               <HeroText />
               <Explore />
-              <Footer />
+              <div className="hidden md:block">
+                <Footer />
+              </div>
             </div>
             <motion.div initial="hidden" animate="visible" className=" ">
               <div className="hidden relative md:top-20 right md:grid ">

@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import { Loader } from "./components";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import NotFound from "./components/NotFound";
@@ -10,6 +11,7 @@ function App() {
   return (
     <>
       <div className="wrapper ">
+        {/* <Loader /> */}
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
