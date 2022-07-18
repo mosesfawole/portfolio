@@ -40,6 +40,23 @@ const Footer = () => {
             <FaEnvelope className="md:m-2 mr-2" /> Email ↗
           </a>
         </div>
+        <div className="text-center flex text-sm  text-gray-400  md:text-start ">
+          <p className=" p-2 flex items-center ">
+            Inspired by{" "}
+            <a
+              rel="noreferrer"
+              className=" text-xs flex  items- ml-1 text-gray-300 font-semibold hover:text-white"
+              href="https://kadet.dev/"
+              target="_blank"
+            >
+              Kadet{""}
+              <span className="flex ml-1">
+                {" "}
+                <FaRegPaperPlane />
+              </span>
+            </a>
+          </p>
+        </div>
       </div>
 
       {/* mobile view */}
