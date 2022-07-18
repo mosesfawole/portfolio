@@ -72,7 +72,7 @@ const Home = () => {
             animate="visible"
             className=" md:grid  md:grid-cols-2"
           >
-            <div className="md:fixed md:w-1/2">
+            <div className="md:fixed md:w-2/5">
               <HeroText />
               <Explore />
               <div className="hidden md:block">

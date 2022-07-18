@@ -32,7 +32,7 @@ const Info = () => {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="p-2 md:relative md:top-10 "
+          className="p-2 md:relative "
         >
           <p className="mb-4 skills font-arima text-center text-2xl   text-white">
             Resume
