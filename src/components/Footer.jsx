@@ -4,7 +4,7 @@ import {
   FaRegPaperPlane,
   FaTwitter,
 } from "react-icons/fa";
-import Avi from "../image/Banner.jpg";
+import Avi from "../image/Banner.avif";
 const Footer = () => {
   return (
     <>
