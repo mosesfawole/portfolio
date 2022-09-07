@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { FaAngleDoubleLeft } from "react-icons/fa";
-import { MdMenu, MdCancel } from "react-icons/md";
+import { MdMenu } from "react-icons/md";
 const Header = () => {
   const [isMenu, setIsMenu] = useState(false);
   const [active, setActive] = useState(true);
@@ -18,23 +17,6 @@ const Header = () => {
       rotate: 0,
       transition: {
         duration: 1,
-      },
-    },
-  };
-  const linkVariants = {
-    hidden: {
-      opacity: 0,
-      scale: "0.5",
-    },
-    visible: {
-      scale: 1.05,
-      opacity: 1,
-      // boxShadow: "0px 0px 8px rgb(255,255,255",
-      textShadow: "0px 0px 8px rgb(255,255,255",
-      transition: {
-        duration: 0.3,
-        repeatType: "reverse",
-        repeat: Infinity,
       },
     },
   };
