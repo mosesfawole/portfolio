@@ -26,7 +26,7 @@ const HeroText = () => {
       className="flex flex-col left md:top-40 md:p-10"
     >
       <div className="md:hidden flex  justify-center avi">
-        <img loading='lazy' src={Avi} alt="" className="shadow-md " />
+        <img loading='lazy' src={Avi} alt="" className="" />
       </div>
       <div className=" flex hero-text flex-col text-sm text-center md:mt-10  md:px-0 md:text-start text-gray-400 ">
         <h1 className=" text-3xl text-white mb-2 ">Hi, I'm Moses Fawole</h1>
