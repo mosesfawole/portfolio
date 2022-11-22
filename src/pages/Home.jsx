@@ -5,6 +5,8 @@ import HeroText from "../components/HeroText";
 import { useEffect, useState } from "react";
 import Loader from "../components/Loader";
 import Explore from "../components/Explore";
+import { FaMoon } from "react-icons/fa";
+
 const Home = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [dark, setDark] = useState(false);
@@ -69,7 +71,10 @@ const Home = () => {
       ) : (
         <div className={dark ? "dark" : "wrapper"}>
           <li>
-            <button onClick={() => setDark(!dark)}>Click me!</button>
+            <button onClick={() => setDark(!dark)}>
+              Click me!
+              <FaMoon />
+            </button>
           </li>
           <motion.div initial="hidden " animate="visible" className=" ">
             <div className="">
