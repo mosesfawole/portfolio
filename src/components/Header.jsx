@@ -24,11 +24,11 @@ const Header = () => {
   return (
     // navbar
     <div className="">
-      <motion.div className="mx-auto p-4 ">
+      <motion.div className=" ">
         {/* Flex container  */}
-        <div className="flex items-center justify-between md:justify-evenly ">
+        <div className=" ">
           {/* Logo */}
-          <p className="md:hidden text-white text-3xl font-rale font-bold">
+          <p className="">
             <Link to="/">Mo.dev</Link>
           </p>
           <motion.div
@@ -42,40 +42,28 @@ const Header = () => {
               top: 0,
               bottom: 0,
             }}
-            className="pt-2 "
+            className=" "
           >
-            <p className="hidden md:flex text-white text-3xl font-rale font-bold cursor-move">
-              Mo.dev
-            </p>
+            <p className="">Mo.dev</p>
           </motion.div>
           {/* Menu items */}
           <motion.div
             initial={{ y: -250 }}
             animate={{ y: 0 }}
             transition={{ delay: 0.6, type: "string", stiffness: 500 }}
-            className="hidden text-xl space-x-6 font-arima md:flex "
+            className=" "
           >
-            <ul className=" text-white flex items-center space-x-5  ">
+            <ul className="">
               <motion.li
                 onClick={() => setActive(!active)}
-                className={active ? "border-l-4 border-indigo-500 " : "  "}
+                className={active ? "" : "  "}
               >
-                <Link
-                  className="li opacity-70 hover:opacity-100 items-center"
-                  to="/"
-                >
+                <Link className="" to="/">
                   Home
                 </Link>
               </motion.li>
-              <li
-                onClick={() => setActive(false)}
-                className={
-                  active
-                    ? "opacity:70"
-                    : "border-l-4 opacity:100 border-indigo-500"
-                }
-              >
-                <Link className="li opacity-70 hover:opacity-100" to="/info">
+              <li onClick={() => setActive(false)} className={active ? "" : ""}>
+                <Link className="" to="/info">
                   Resume
                 </Link>
               </li>{" "}
@@ -83,17 +71,11 @@ const Header = () => {
           </motion.div>
 
           {/* Mobile menu  */}
-          <div className="md:hidden">
-            <MdMenu
-              className={isMenu ? "" : "text-white text-3xl"}
-              onClick={openMenu}
-            />
+          <div className="">
+            <MdMenu className={isMenu ? "" : ""} onClick={openMenu} />
 
-            <div id="menu" className={isMenu ? "app-menu" : "hidden"}>
-              <div
-                onClick={handleClose}
-                className="flex closebtn font-bold text-white  "
-              >
+            <div id="menu" className={isMenu ? "" : ""}>
+              <div onClick={handleClose} className=" ">
                 <svg
                   stroke="#fff"
                   fill="#fff"
@@ -107,7 +89,7 @@ const Header = () => {
                   </g>
                 </svg>
               </div>
-              <div className="content text-2xl">
+              <div className="">
                 <Link to="/" onClick={handleClose}>
                   Home
                 </Link>

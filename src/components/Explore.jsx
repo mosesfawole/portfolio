@@ -22,17 +22,14 @@ const Explore = () => {
     },
   };
   return (
-    <div className="buttons flex justify-center p-4  md:hidden">
+    <div className="">
       <motion.button
         variants={buttonVariants}
         hidden="hidden"
         animate="visible"
-        className="button flex p-2 items-center text-gray-200  rounded-md "
+        className=" "
       >
-        <Link
-          className="flex items-center text-md font-semibold"
-          to="/projects"
-        >
+        <Link className="" to="/projects">
           Explore <FaArrowRight className="ml-2" />
         </Link>
       </motion.button>

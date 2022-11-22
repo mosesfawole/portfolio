@@ -8,49 +8,49 @@ import Avi from "../image/Banner.avif";
 const Footer = () => {
   return (
     <>
-      <div className="hidden md:p-8  text-white md:flex   ">
+      <div className=" ">
         <div className="">
-          <img src={Avi} alt="" className="avatar" />
+          <img src={Avi} alt="" className="" />
         </div>
-        <div className="flex foot items-center justify-center text-sm space-x-4">
+        <div className="">
           <a
             rel="noreferrer"
             href="https://github.com/mosesfawole"
             target="_blank"
-            className="flex items-center md:opacity-75 md:hover:opacity-100 "
+            className=""
           >
-            <FaGithub className=" md:m-2 mr-2" /> Github ↗
+            <FaGithub className="" /> Github ↗
           </a>
           <a
             rel="noreferrer"
             href="https://twitter.com/Pharwolehh"
             target="_blank"
             noreferrer="true"
-            className="flex items-center md:opacity-75 md:hover:opacity-100 "
+            className=""
           >
-            <FaTwitter className="md:m-2 mr-2" /> Twitter ↗
+            <FaTwitter className="" /> Twitter ↗
           </a>
           <a
             rel="noreferrer"
             href="mailto:pharwoleh.dev@gmail.com"
             target="_blank"
             noreferrer="true"
-            className="flex items-center md:opacity-75 hover:opacity-100 "
+            className=" "
           >
-            <FaEnvelope className="md:m-2 mr-2" /> Email ↗
+            <FaEnvelope className="" /> Email ↗
           </a>
         </div>
-        <div className="text-center flex text-sm  text-gray-400  md:text-start ">
-          <p className=" p-2 flex items-center ">
+        <div className="">
+          <p className="  ">
             Inspired by{" "}
             <a
               rel="noreferrer"
-              className=" text-xs flex  items- ml-1 text-gray-300 font-semibold hover:text-white"
+              className=""
               href="https://kadet.dev/"
               target="_blank"
             >
               Kadet{""}
-              <span className="flex ml-1">
+              <span className="">
                 {" "}
                 <FaRegPaperPlane />
               </span>
@@ -60,46 +60,46 @@ const Footer = () => {
       </div>
 
       {/* mobile view */}
-      <div className="md:hidden  text-white flex flex-col items-center  text-2xl   ">
-        <div className="flex-row flex  space-x-4 mb-2 mt-4">
+      <div className="">
+        <div className="">
           <a
             rel="noreferrer"
             href="https://github.com/mosesfawole"
             target="_blank"
-            className="flex items-center md:opacity-75 md:hover:opacity-100 "
+            className=" "
           >
-            <FaGithub className=" md:m-2 mr-2" />
+            <FaGithub className="" />
           </a>
           <a
             rel="noreferrer"
             href="https://twitter.com/Pharwolehh"
             target="_blank"
             noreferrer="true"
-            className="flex items-center md:opacity-75 md:hover:opacity-100 "
+            classNamecenter=""
           >
-            <FaTwitter className="md:m-2 mr-2" />
+            <FaTwitter className="" />
           </a>
           <a
             rel="noreferrer"
             href="mailto:pharwoleh.dev@gmail.com"
             target="_blank"
             noreferrer="true"
-            className="flex items-center md:opacity-75 md:hover:opacity-100 "
+            className=" "
           >
-            <FaEnvelope className="md:m-2 mr-2" />
+            <FaEnvelope className="" />
           </a>
         </div>
-        <div className="text-center flex text-sm  text-gray-400  md:text-start ">
-          <p className=" p-2 flex items-center ">
+        <div className=" ">
+          <p className="">
             Inspired by{" "}
             <a
               rel="noreferrer"
-              className=" text-xs flex  items- ml-1 text-gray-300 font-semibold hover:text-white"
+              className=""
               href="https://kadet.dev/"
               target="_blank"
             >
               Kadet{""}
-              <span className="flex ml-1">
+              <span className="">
                 {" "}
                 <FaRegPaperPlane />
               </span>

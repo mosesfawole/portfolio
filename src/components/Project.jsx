@@ -24,35 +24,33 @@ const Project = ({ details }) => {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-      className="flex flex-col cursor-default"
+      className=""
     >
-      <div className="box p-8   rounded-lg   text-white  shadow-lg ">
-        <h3 className="text-2xl font-arima  font-semibold mb-2">{title}</h3>
-        <h4 className="uppercase tech font-mono font-semibold text-xs mb-2 ">
-          {technology}
-        </h4>
-        <p className="desc text-sm text-gray-50   mb-2">{description}</p>
-        <div className="flex text-xs  ">
-          <span className="icon   text-gray-400 hover:text-white">
+      <div className=" ">
+        <h3 className="">{title}</h3>
+        <h4 className="">{technology}</h4>
+        <p className="">{description}</p>
+        <div className="">
+          <span className="">
             <a
               title="Live preview"
-              className="mr-2 flex  items-center"
+              className=""
               href={live}
               target="_blank"
               rel="noreferrer"
             >
-              <FaEye className="mr-1" /> Live
+              <FaEye className="" /> Live
             </a>
           </span>
-          <span className="icon  text-gray-400 hover:text-white">
+          <span className="">
             <a
               title="Source code"
-              className="mr-2  flex items-center"
+              className=""
               href={github}
               target="_blank "
               rel="noreferrer"
             >
-              <FaCodeBranch className="mr-1" /> Source
+              <FaCodeBranch className="" /> Source
             </a>
           </span>
         </div>
