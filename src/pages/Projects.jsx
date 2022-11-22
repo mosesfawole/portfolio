@@ -69,13 +69,11 @@ const Projects = () => {
 
   return (
     <div className="">
-      <div id="projects" className=" cursor-default items-center">
-        <div className="right grid projects">
-          <p className="mb-10 skills font-arima text-center text-2xl   text-white">
-            Projects
-          </p>
+      <div id="projects" className=" ">
+        <div className="">
+          <p className="">Projects</p>
 
-          <div className=" grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-4 w-3/4  m-auto opacity-100 shadow-md proj ">
+          <div className="">
             {projects.map((project, index) => (
               <div key={index} className="">
                 <Project details={project} />
@@ -84,18 +82,18 @@ const Projects = () => {
           </div>
         </div>
 
-        <div className="flex justify-evenly  md:hidden mt-6 mb-4">
-          <div className="buttons  ">
-            <button className="button text-gray-200 px-3 py-2 rounded-md ">
-              <Link className="flex items-center" to="/">
-                <FaArrowLeft className="mr-2 " /> Home
+        <div className="">
+          <div className="  ">
+            <button className="">
+              <Link className="" to="/">
+                <FaArrowLeft className="" /> Home
               </Link>
             </button>
           </div>
 
-          <div className="buttons  flex justify-center">
-            <button className="button flex  text-gray-200 px-3 py-2 rounded-md ">
-              <Link className="flex items-center" to="/info">
+          <div className="  ">
+            <button className="">
+              <Link className="" to="/info">
                 Info <FaArrowRight className="ml-2 " />
               </Link>
             </button>

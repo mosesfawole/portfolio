@@ -22,9 +22,9 @@ const Info = () => {
     },
   };
   return (
-    <div className="items-center">
-      <div className="grid md:grid-cols-2 p-4">
-        <div className="hidden md:block">
+    <div className="">
+      <div className="">
+        <div className="">
           <HeroText />
           <Footer />
         </div>
@@ -32,26 +32,24 @@ const Info = () => {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="p-2 md:relative "
+          className=" "
         >
-          <p className="mb-4 skills font-arima text-center text-2xl   text-white">
-            Resume
-          </p>
+          <p className="">Resume</p>
           <Resume />
         </motion.div>
       </div>
-      <div className="flex justify-evenly md:hidden ">
-        <div className="buttons   flex justify-center">
-          <button className="button flex m-2 text-gray-200 px-3 py-2 rounded-md ">
-            <Link className="flex items-center" to="/projects">
-              <FaArrowLeft className="mr-2 " /> Projects
+      <div className=" ">
+        <div className="buttons   ">
+          <button className="button  ">
+            <Link className="flex " to="/projects">
+              <FaArrowLeft className=" " /> Projects
             </Link>
           </button>
         </div>
-        <div className="buttons  flex justify-center">
-          <button className="button flex m-2 text-gray-200 px-3 py-2 rounded-md ">
-            <Link className="flex items-center" to="/">
-              Home <FaArrowRight className="ml-2 r" />
+        <div className="buttons ">
+          <button className="button  ">
+            <Link className="" to="/">
+              Home <FaArrowRight className="" />
             </Link>
           </button>
         </div>

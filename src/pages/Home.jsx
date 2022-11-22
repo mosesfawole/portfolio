@@ -67,24 +67,18 @@ const Home = () => {
         <div className="loader">{<Loader />}</div>
       ) : (
         <div className="flex">
-          <motion.div
-            initial="hidden "
-            animate="visible"
-            className=" md:grid  md:grid-cols-2"
-          >
-            <div className="md:fixed md:w-2/5">
+          <motion.div initial="hidden " animate="visible" className=" ">
+            <div className="">
               <HeroText />
               <Explore />
-              <div className="hidden md:block">
+              <div className="">
                 <Footer />
               </div>
             </div>
             <motion.div initial="hidden" animate="visible" className=" ">
-              <div className="hidden relative md:top-20 right md:grid ">
-                <p className="mb-4 font-arima uppercase text-center text-white">
-                  Projects
-                </p>
-                <div className="md:grid md:grid-cols-2 md:gap-4 ">
+              <div className="">
+                <p className="">Projects</p>
+                <div className="">
                   {projects.map((project, index) => (
                     <div key={index} className="">
                       <Project details={project} />
