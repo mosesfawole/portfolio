@@ -7,6 +7,7 @@ import Loader from "../components/Loader";
 import Explore from "../components/Explore";
 const Home = () => {
   const [isLoading, setIsLoading] = useState(false);
+  const [dark, setDark] = useState(false);
 
   const projects = [
     {
@@ -64,11 +65,15 @@ const Home = () => {
   return (
     <>
       {isLoading ? (
-        <div className="loader">{<Loader />}</div>
+        <div className="">{<Loader />}</div>
       ) : (
-        <div className="flex">
+        <div className={dark ? "dark" : "wrapper"}>
+          <li>
+            <button onClick={() => setDark(!dark)}>Click me!</button>
+          </li>
           <motion.div initial="hidden " animate="visible" className=" ">
             <div className="">
+              <Header />
               <HeroText />
               <Explore />
               <div className="">

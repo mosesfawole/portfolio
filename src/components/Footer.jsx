@@ -75,7 +75,7 @@ const Footer = () => {
             href="https://twitter.com/Pharwolehh"
             target="_blank"
             noreferrer="true"
-            classNamecenter=""
+            className=""
           >
             <FaTwitter className="" />
           </a>

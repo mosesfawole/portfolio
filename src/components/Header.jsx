@@ -23,55 +23,30 @@ const Header = () => {
 
   return (
     // navbar
-    <div className="">
-      <motion.div className=" ">
-        {/* Flex container  */}
-        <div className=" ">
-          {/* Logo */}
-          <p className="">
-            <Link to="/">Mo.dev</Link>
-          </p>
-          <motion.div
-            variants={logoVariants}
-            initial="hidden"
-            animate="visible"
-            drag
-            dragConstraints={{
-              left: 0,
-              right: 0,
-              top: 0,
-              bottom: 0,
-            }}
-            className=" "
-          >
-            <p className="">Mo.dev</p>
-          </motion.div>
-          {/* Menu items */}
-          <motion.div
-            initial={{ y: -250 }}
-            animate={{ y: 0 }}
-            transition={{ delay: 0.6, type: "string", stiffness: 500 }}
-            className=" "
-          >
-            <ul className="">
-              <motion.li
-                onClick={() => setActive(!active)}
-                className={active ? "" : "  "}
-              >
-                <Link className="" to="/">
-                  Home
-                </Link>
-              </motion.li>
-              <li onClick={() => setActive(false)} className={active ? "" : ""}>
-                <Link className="" to="/info">
-                  Resume
-                </Link>
-              </li>{" "}
-            </ul>
-          </motion.div>
+    <div className="header flex p-4">
+      <div className="logo flex flex-1">Mo.dev</div>
+      <div className="flex items-center">
+        <ul className="flex gap-4">
+          <li className="">
+            <Link className="" to="/">
+              Home
+            </Link>
+          </li>
+          <li className="">
+            <Link className="" to="/contact ">
+              Contact Me
+            </Link>
+          </li>
+          <li>
+            <Link className="" to="/info">
+              Resume
+            </Link>
+          </li>{" "}
+        </ul>
+      </div>
 
-          {/* Mobile menu  */}
-          <div className="">
+      {/* Mobile menu  */}
+      {/* <div className="">
             <MdMenu className={isMenu ? "" : ""} onClick={openMenu} />
 
             <div id="menu" className={isMenu ? "" : ""}>
@@ -103,9 +78,7 @@ const Header = () => {
                 </Link>
               </div>
             </div>
-          </div>
-        </div>
-      </motion.div>
+          </div> */}
     </div>
   );
 };

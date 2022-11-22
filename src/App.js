@@ -10,16 +10,15 @@ import Projects from "./pages/Projects";
 function App() {
   return (
     <>
-      <div className="wrapper ">
+      <div className="">
         {/* <Loader /> */}
-        <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/info" element={<Info />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-        <div className="md:hidden">
+        <div className="">
           <Footer />
         </div>
       </div>

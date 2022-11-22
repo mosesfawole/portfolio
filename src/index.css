@@ -11,9 +11,19 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
-  background: #151515;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  font-family: "Epilogue", sans-serif;
+}
+
+.wrapper {
+  /* Set a specific height */
+  min-height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+}
+.dark {
+  background-color: black;
+  color: white;
+  transition: all 0.3s ease-in-out;
 }
