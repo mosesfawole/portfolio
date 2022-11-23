@@ -10,9 +10,6 @@ const Footer = () => {
     <>
       <div className=" ">
         <div className="">
-          <img src={Avi} alt="" className="" />
-        </div>
-        <div className="">
           <a
             rel="noreferrer"
             href="https://github.com/mosesfawole"

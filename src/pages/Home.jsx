@@ -69,7 +69,7 @@ const Home = () => {
       {isLoading ? (
         <div className="">{<Loader />}</div>
       ) : (
-        <div className={dark ? "dark" : "wrapper"}>
+        <div className={dark ? "dark" : ""}>
           <li>
             <button onClick={() => setDark(!dark)}>
               Click me!
@@ -78,25 +78,9 @@ const Home = () => {
           </li>
           <motion.div initial="hidden " animate="visible" className=" ">
             <div className="">
-              <Header />
               <HeroText />
               <Explore />
-              <div className="">
-                <Footer />
-              </div>
             </div>
-            <motion.div initial="hidden" animate="visible" className=" ">
-              <div className="">
-                <p className="">Projects</p>
-                <div className="">
-                  {projects.map((project, index) => (
-                    <div key={index} className="">
-                      <Project details={project} />
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </motion.div>
           </motion.div>
         </div>
       )}

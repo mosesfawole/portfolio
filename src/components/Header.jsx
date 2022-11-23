@@ -76,15 +76,15 @@ const Header = () => {
           </div>
           <div className="">
             <Link to="/" onClick={handleClose}>
-              Home
+              home
             </Link>
 
             <Link to="/projects" onClick={handleClose}>
-              Projects
+              projects
             </Link>
 
             <Link to="/info" onClick={handleClose}>
-              About Me
+              about Me
             </Link>
           </div>
         </div>

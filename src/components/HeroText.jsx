@@ -20,11 +20,16 @@ const HeroText = () => {
   };
 
   return (
-    <motion.div hidden={{ x: "-100vw" }} animate={{ x: 0 }} className="">
-      <div className="">
-        <img loading="lazy" src={Avi} alt="" className="" />
+    <div className="flex md:flex-row-reverse flex-col gap-8  items-center p-4">
+      <div className="flex justify-center items-center">
+        <img
+          loading="lazy"
+          src={Avi}
+          alt=""
+          className="w-1/2 h-1/2 rounded-xl"
+        />
       </div>
-      <div className=" ">
+      <div className="">
         <h1 className="">Hi, I'm Moses Fawole</h1>
         <h2 className=" ">
           I'm a <span className=" ">Frontend Developer</span>, and sometimes
@@ -40,7 +45,7 @@ const HeroText = () => {
           <br />
         </p>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

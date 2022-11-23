@@ -12,6 +12,8 @@ function App() {
     <>
       <div className="">
         {/* <Loader /> */}
+        <Header />
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/info" element={<Info />} />
