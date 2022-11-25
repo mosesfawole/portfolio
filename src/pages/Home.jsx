@@ -9,7 +9,6 @@ import { FaMoon } from "react-icons/fa";
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(false);
-  const [dark, setDark] = useState(false);
 
   const projects = [
     {
@@ -69,13 +68,7 @@ const Home = () => {
       {isLoading ? (
         <div className="">{<Loader />}</div>
       ) : (
-        <div className={dark ? "dark" : ""}>
-          <li>
-            <button onClick={() => setDark(!dark)}>
-              Click me!
-              <FaMoon />
-            </button>
-          </li>
+        <div className="">
           <motion.div initial="hidden " animate="visible" className=" ">
             <div className="">
               <HeroText />

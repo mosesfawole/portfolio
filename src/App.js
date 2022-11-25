@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import { Loader } from "./components";
 import Footer from "./components/Footer";
@@ -7,6 +8,7 @@ import NotFound from "./components/NotFound";
 import Home from "./pages/Home";
 import Info from "./pages/Info";
 import Projects from "./pages/Projects";
+
 function App() {
   return (
     <>
