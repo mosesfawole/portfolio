@@ -26,12 +26,12 @@ const Project = ({ details }) => {
       animate="visible"
       className=""
     >
-      <div className=" ">
-        <h3 className="">{title}</h3>
+      <div className="flex flex-col gap-4 justify-center items-center shadow-lg  h-[300px]">
+        <h3 className="text-xl  font-bold">{title}</h3>
         <h4 className="">{technology}</h4>
         <p className="">{description}</p>
-        <div className="">
-          <span className="">
+        <div className="flex justify-center gap-4">
+          <span className="opacity-80 hover:opacity-100">
             <a
               title="Live preview"
               className=""
@@ -42,7 +42,7 @@ const Project = ({ details }) => {
               <FaEye className="" /> Live
             </a>
           </span>
-          <span className="">
+          <span className="opacity-80 hover:opacity-100">
             <a
               title="Source code"
               className=""
@@ -50,7 +50,7 @@ const Project = ({ details }) => {
               target="_blank "
               rel="noreferrer"
             >
-              <FaCodeBranch className="" /> Source
+              <FaCodeBranch className="opacity-80 hover:opacity-100" /> Source
             </a>
           </span>
         </div>

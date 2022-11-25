@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import HeroText from "../components/HeroText";
 const Projects = () => {
   let navigate = useNavigate();
   useEffect(() => {
@@ -68,12 +67,12 @@ const Projects = () => {
   ];
 
   return (
-    <div className="">
+    <div className="p-4">
       <div id="projects" className=" ">
         <div className="">
           <p className="">Projects</p>
 
-          <div className="">
+          <div className="grid md:grid-cols-2 text-center gap-8">
             {projects.map((project, index) => (
               <div key={index} className="">
                 <Project details={project} />

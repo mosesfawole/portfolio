@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import Loader from "../components/Loader";
 import Explore from "../components/Explore";
 import { FaMoon } from "react-icons/fa";
+import Projects from "./Projects";
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -72,7 +73,7 @@ const Home = () => {
           <motion.div initial="hidden " animate="visible" className=" ">
             <div className="">
               <HeroText />
-              <Explore />
+              <Projects />
             </div>
           </motion.div>
         </div>
