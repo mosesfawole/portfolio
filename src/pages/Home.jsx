@@ -74,6 +74,7 @@ const Home = () => {
             <div className="">
               <HeroText />
               <Projects />
+              <Resume />
             </div>
           </motion.div>
         </div>

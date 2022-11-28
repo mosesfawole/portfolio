@@ -80,24 +80,6 @@ const Projects = () => {
             ))}
           </div>
         </div>
-
-        <div className="">
-          <div className="  ">
-            <button className="">
-              <Link className="" to="/">
-                <FaArrowLeft className="" /> Home
-              </Link>
-            </button>
-          </div>
-
-          <div className="  ">
-            <button className="">
-              <Link className="" to="/info">
-                Info <FaArrowRight className="ml-2 " />
-              </Link>
-            </button>
-          </div>
-        </div>
       </div>
     </div>
   );

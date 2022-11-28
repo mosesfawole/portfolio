@@ -4,17 +4,16 @@ import {
   FaRegPaperPlane,
   FaTwitter,
 } from "react-icons/fa";
-import Avi from "../image/Banner.avif";
 const Footer = () => {
   return (
     <>
-      <div className=" ">
-        <div className="">
+      <div className="flex items-center  justify-center">
+        <div className="flex items-center  gap-4 ">
           <a
             rel="noreferrer"
             href="https://github.com/mosesfawole"
             target="_blank"
-            className=""
+            className="flex items-center gap-4"
           >
             <FaGithub className="" /> Github ↗
           </a>
@@ -23,7 +22,7 @@ const Footer = () => {
             href="https://twitter.com/Pharwolehh"
             target="_blank"
             noreferrer="true"
-            className=""
+            className="flex items-center gap-4"
           >
             <FaTwitter className="" /> Twitter ↗
           </a>
@@ -32,32 +31,15 @@ const Footer = () => {
             href="mailto:pharwoleh.dev@gmail.com"
             target="_blank"
             noreferrer="true"
-            className=" "
+            className=" flex items-center gap-4"
           >
             <FaEnvelope className="" /> Email ↗
           </a>
         </div>
-        <div className="">
-          <p className="  ">
-            Inspired by{" "}
-            <a
-              rel="noreferrer"
-              className=""
-              href="https://kadet.dev/"
-              target="_blank"
-            >
-              Kadet{""}
-              <span className="">
-                {" "}
-                <FaRegPaperPlane />
-              </span>
-            </a>
-          </p>
-        </div>
       </div>
 
       {/* mobile view */}
-      <div className="">
+      <div className="md:hidden">
         <div className="">
           <a
             rel="noreferrer"
