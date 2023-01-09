@@ -30,7 +30,7 @@ const Project = ({ details }) => {
         <h3 className="text-xl  font-bold">{title}</h3>
         <h4 className="">{technology}</h4>
         <p className="">{description}</p>
-        <div className="flex justify-center gap-4">
+        <div className="flex justify-center items-center gap-4">
           <span className="opacity-80 hover:opacity-100">
             <a
               title="Live preview"
@@ -39,7 +39,7 @@ const Project = ({ details }) => {
               target="_blank"
               rel="noreferrer"
             >
-              <FaEye className="" /> Live
+              <FaEye className="flex items-center text-center" /> Live
             </a>
           </span>
           <span className="opacity-80 hover:opacity-100">

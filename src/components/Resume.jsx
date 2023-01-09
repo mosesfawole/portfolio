@@ -3,6 +3,7 @@ import resume from "../file/resume.pdf";
 const Resume = () => {
   return (
     <div className="  ">
+      <h1 className="text-xl semibold text-center">Resume</h1>
       <div className=" ">
         <p className=" ">Moses Fawole</p>
 
