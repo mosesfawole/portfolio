@@ -15,7 +15,7 @@ const Header = () => {
   const openMenu = () => {
     setIsMenu(true);
   };
-  const handleClose = () => setIsMenu(!isMenu);
+  const closeMenu = () => setIsMenu(!isMenu);
   {
   }
   const logoVariants = {
@@ -69,8 +69,42 @@ const Header = () => {
         </div>
 
         <div id="menu" className={isMenu ? "" : "hidden"}>
-          <div onClick={handleClose} className="text-3xl ">
-            <MdClose />
+          <div
+            className={
+              isMenu
+                ? "lists  pt-8 px-7 fixed top-0 right-0 w-[70%] z-10 h-full  bg-header-bg backdrop-blur-2xl md:hidden"
+                : "hidden"
+            }
+          >
+            <span
+              className="flex justify-end flex text-3xl"
+              onClick={closeMenu}
+            >
+              <MdClose />
+            </span>
+            <ul className="flex flex-col uppercase gap-8 mt-16   text-white text-base font-barlow   ">
+              {navs.map((item, index) => (
+                <li
+                  onClick={closeMenu}
+                  className={
+                    currentPage === `${item}`
+                      ? ``
+                      : "flex gap-3 cursor-pointer "
+                  }
+                  key={index}
+                >
+                  {" "}
+                  <Link
+                    className="flex gap-3"
+                    onClick={() => setCurrentPage(`${item}`)}
+                    to={`/${item}`}
+                  >
+                    <span className="font-bold"> 0{index}</span>
+                    <p>{item}</p>
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>
