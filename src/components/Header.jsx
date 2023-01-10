@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { MdMenu } from "react-icons/md";
+import { MdMenu, MdClose } from "react-icons/md";
 import navs from "../lib/navs";
 import { useEffect } from "react";
 const Header = () => {
@@ -30,12 +30,14 @@ const Header = () => {
 
   return (
     // navbar
-    <div className="header  p-4">
+    <div className="header  py-10">
       {/* desktop view */}
-      <div className="desktop text-white md:flex hidden">
-        <div className="logo flex flex-1">mo.dev</div>
-        <div className="flex items-center">
-          <ul className="flex gap-4">
+      <div className="desktop md:flex justify-center items-center hidden">
+        <div className="logo hidden  md:flex flex-1 px-6 text-3xl  text-white  font-barlow ">
+          <Link to={"/home"}>mo.dev</Link>
+        </div>
+        <div className="hidden sm:hidden right-0 bg-header-bg backdrop-blur-2xl md:flex md:unset">
+          <ul className="flex uppercase gap-12 p-6 h-[96px]  w-[830px] sm:w-full text-white text-base font-barlow pr-[125px] pl-[123px] ">
             {navs.map((item, index) => (
               <li
                 key={index}
@@ -56,43 +58,19 @@ const Header = () => {
       </div>
 
       {/* Mobile menu  */}
-      <div className="md:hidden flex items-center">
-        <div className="logo flex flex-1">mo.dev</div>
+      <div className="md:hidden text-white flex px-6 items-center">
+        <div className="logo md:hidden flex  flex-1">mo.dev</div>
 
         <div className="">
           <MdMenu
-            className={isMenu ? "hidden" : "flex text-[2rem]"}
+            className={isMenu ? "hidden" : "flex text-3xl"}
             onClick={openMenu}
           />
         </div>
 
         <div id="menu" className={isMenu ? "" : "hidden"}>
-          <div onClick={handleClose} className=" ">
-            <svg
-              stroke="#fff"
-              fill="#fff"
-              width="26"
-              height="26"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g fill="#151515" fillRule="evenodd">
-                <path d="m2.393.98 22.628 22.628-1.414 1.414L.979 2.395z" />
-                <path d="M.98 23.607 23.609.979l1.414 1.414L2.395 25.021z" />
-              </g>
-            </svg>
-          </div>
-          <div className="">
-            <Link to="/" onClick={handleClose}>
-              home
-            </Link>
-
-            <Link to="/projects" onClick={handleClose}>
-              projects
-            </Link>
-
-            <Link to="/info" onClick={handleClose}>
-              about Me
-            </Link>
+          <div onClick={handleClose} className="text-3xl ">
+            <MdClose />
           </div>
         </div>
       </div>
