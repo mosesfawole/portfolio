@@ -73,8 +73,6 @@ const Home = () => {
           <motion.div initial="hidden " animate="visible" className=" ">
             <div className="">
               <HeroText />
-              <Projects />
-              <Resume />
             </div>
           </motion.div>
         </div>
