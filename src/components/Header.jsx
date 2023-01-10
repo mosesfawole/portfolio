@@ -1,16 +1,23 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { MdMenu } from "react-icons/md";
 import navs from "../lib/navs";
+import { useEffect } from "react";
 const Header = () => {
   const [isMenu, setIsMenu] = useState(false);
+
+  const { pathname } = useLocation();
+  const [currentPage, setCurrentPage] = useState(pathname);
+  useEffect(() => {
+    setCurrentPage(pathname);
+  });
   const openMenu = () => {
-    setIsMenu(!isMenu);
+    setIsMenu(true);
   };
-  const handleClose = () => {
-    setIsMenu(!isMenu);
-  };
+  const handleClose = () => setIsMenu(!isMenu);
+  {
+  }
   const logoVariants = {
     hidden: { rotate: -180 },
     visible: {
@@ -30,7 +37,15 @@ const Header = () => {
         <div className="flex items-center">
           <ul className="flex gap-4">
             {navs.map((item, index) => (
-              <li key={index}>
+              <li
+                key={index}
+                onClick={() => setIsMenu(false)}
+                className={
+                  currentPage === `/${item}`
+                    ? `border-b-2 pb-[70px] `
+                    : "flex gap-3 hover:border-opacity-[.5] hover:border-b-2 hover:pb-[70px] hover:border-white  "
+                }
+              >
                 <Link to={`/${item}`}>
                   <p>{item}</p>
                 </Link>
