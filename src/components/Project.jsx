@@ -39,7 +39,7 @@ const Project = ({ details }) => {
               target="_blank"
               rel="noreferrer"
             >
-              <FaEye className="flex items-center text-center" /> Live
+              <FaEye className="" /> Live
             </a>
           </span>
           <span className="opacity-80 hover:opacity-100">
