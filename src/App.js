@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
 import { Loader } from "./components";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
@@ -8,11 +8,19 @@ import NotFound from "./components/NotFound";
 import Home from "./pages/Home";
 import Info from "./pages/Info";
 import Projects from "./pages/Projects";
-
 function App() {
+  const { pathname } = useLocation();
+  const [currentPage, setCurrentPage] = useState("/");
+
   return (
     <>
-      <div className="">
+      <div
+        className={
+          currentPage === "none"
+            ? ""
+            : "bg-mobile sm:bg-tablet md:bg-desktop bg-center bg-cover min-h-screen"
+        }
+      >
         {/* <Loader /> */}
         <Header />
 

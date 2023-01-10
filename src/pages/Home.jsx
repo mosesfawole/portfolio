@@ -69,7 +69,7 @@ const Home = () => {
       {isLoading ? (
         <div className="">{<Loader />}</div>
       ) : (
-        <div className="bg-mobile sm;bg-tablet md:bg-desktop">
+        <div className="">
           <motion.div initial="hidden " animate="visible" className=" ">
             <div className="">
               <HeroText />
