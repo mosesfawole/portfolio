@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { MdMenu } from "react-icons/md";
-
+import navs from "../lib/navs";
 const Header = () => {
   const [isMenu, setIsMenu] = useState(false);
   const openMenu = () => {
@@ -25,25 +25,17 @@ const Header = () => {
     // navbar
     <div className="header  p-4">
       {/* desktop view */}
-      <div className="desktop md:flex hidden">
+      <div className="desktop text-white md:flex hidden">
         <div className="logo flex flex-1">mo.dev</div>
         <div className="flex items-center">
           <ul className="flex gap-4">
-            <li className="">
-              <Link className="" to="/">
-                home
-              </Link>
-            </li>
-            <li className="">
-              <Link className="" to="/contact ">
-                contact
-              </Link>
-            </li>
-            <li>
-              <Link className="" to="/info">
-                resume
-              </Link>
-            </li>{" "}
+            {navs.map((item, index) => (
+              <li key={index}>
+                <Link to={`/${item}`}>
+                  <p>{item}</p>
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
