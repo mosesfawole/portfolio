@@ -2,28 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Raleway&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&family=Poppins:  sans-serifwght@300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Arima:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-body {
-  font-family: "Epilogue", sans-serif;
-}
-
-.wrapper {
-  /* Set a specific height */
-  min-height: 500px;
-
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-}
-.dark {
-  background-color: #121212;
-  color: white;
-  transition: all 0.3s ease-in-out;
 }
