@@ -1,19 +1,18 @@
-import { FaGithub, FaEnvelope, FaTwitter } from "react-icons/fa";
 const socials = [
   {
     name: "Github",
     href: "www.github.com/mosesfawole",
-    logo: <FaGithub />,
+    logo: "",
   },
   {
     name: "Twitter",
     href: "www.twitter.com/pharwoleh",
-    logo: <FaTwitter />,
+    logo: "",
   },
   {
     name: "Email",
     href: "mailto:phaworleh.dev@gmail.com",
-    logo: <FaEnvelope />,
+    logo: "",
   },
 ];
 export default socials;
