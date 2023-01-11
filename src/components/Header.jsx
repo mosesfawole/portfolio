@@ -30,7 +30,7 @@ const Header = () => {
 
   return (
     // navbar
-    <div className="header  ">
+    <div className="header  py-4">
       {/* desktop view */}
       <div className="desktop md:flex justify-center items-center hidden">
         <div className="logo hidden  md:flex flex-1 px-6 text-3xl  text-white  font-barlow ">
@@ -59,7 +59,7 @@ const Header = () => {
 
       {/* Mobile menu  */}
       <div className="md:hidden text-white flex px-6 items-center">
-        <div className="logo md:hidden flex  flex-1">
+        <div className="logo md:hidden flex  flex-1 font-barlow  text-xl">
           <Link to={"/home"}>mo.dev</Link>
         </div>
 
