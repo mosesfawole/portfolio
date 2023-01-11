@@ -20,30 +20,31 @@ const HeroText = () => {
   };
 
   return (
-    <div className="flex md:flex-row-reverse flex-col gap-8  items-center p-4">
-      <div className="flex justify-center items-center">
-        <img
-          loading="lazy"
-          src={Avi}
-          alt=""
-          className="w-1/2 h-1/2 rounded-xl"
-        />
-      </div>
+    <div className="flex md:flex-row flex-col gap-8 justify-around  items-center p-4">
       <div className="">
-        <h1 className="">Hi, I'm Moses Fawole</h1>
-        <h2 className=" ">
-          I'm a <span className=" ">Frontend Developer</span>, and sometimes
-          work with the <span className="">backend </span> using
-          <span className=""> the MERN Stack. </span>
-        </h2>
-        <p className="">
-          I create <span className="">interactive experiences</span> and{" "}
-          <span className="">responsive</span> web applications using modern
-          technology.
-          <br /> I'm <span className="">currently learning </span>
-          the MERN Stack.
-          <br />
-        </p>
+        {/* <div className="">
+          <img loading="lazy" src={Avi} alt="" className=" rounded-xl" />
+        </div> */}
+        <div className="text-center">
+          <h1 className="text-xl font-barlow  md:text-4xl text-[#D0D6F9]">
+            Hi, I'm Moses Fawole
+          </h1>
+          <h2 className="font-bellefair  text-[#D0D6F9] ">
+            I'm a Frontend Developer, and sometimes work with the backend using
+            the MERN Stack. I create interactive experiences and responsive web
+            applications using modern technology. I'm currently learning the
+            MERN Stack.
+          </h2>
+        </div>
+      </div>
+      <div className="flex ">
+        <Link to="/projects">
+          <button className="animate-pulse transition-all delay-150 ease-in-out bg-white w-36 h-36 md:w-64 md:h-64 rounded-full outline  hover:outline-[40px] outline-[#ffffff19]    ">
+            <p className="font-bellefair uppercase text-[#0B0D17] text-xl md:text-3xl leading-5">
+              Explore
+            </p>
+          </button>
+        </Link>
       </div>
     </div>
   );

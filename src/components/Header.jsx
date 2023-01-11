@@ -76,10 +76,7 @@ const Header = () => {
                 : "hidden"
             }
           >
-            <span
-              className="flex justify-end flex text-3xl"
-              onClick={closeMenu}
-            >
+            <span className="flex justify-end  text-3xl" onClick={closeMenu}>
               <MdClose />
             </span>
             <ul className="flex flex-col uppercase gap-8 mt-16   text-white text-base font-barlow   ">
