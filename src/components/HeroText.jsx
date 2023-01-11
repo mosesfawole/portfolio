@@ -20,12 +20,12 @@ const HeroText = () => {
   };
 
   return (
-    <div className="flex md:flex-row flex-col gap-8 justify-around  items-center p-4">
+    <div className="flex md:flex-row flex-col gap-8   items-center p-4">
       <div className="">
         {/* <div className="">
           <img loading="lazy" src={Avi} alt="" className=" rounded-xl" />
         </div> */}
-        <div className="text-center">
+        <div className="text-center md:text-left ">
           <h1 className="text-xl font-barlow  md:text-4xl text-[#D0D6F9]">
             Hi, I'm Moses Fawole
           </h1>

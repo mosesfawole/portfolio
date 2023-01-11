@@ -59,7 +59,9 @@ const Header = () => {
 
       {/* Mobile menu  */}
       <div className="md:hidden text-white flex px-6 items-center">
-        <div className="logo md:hidden flex  flex-1">mo.dev</div>
+        <div className="logo md:hidden flex  flex-1">
+          <Link to={"/home"}>mo.dev</Link>
+        </div>
 
         <div className="">
           <MdMenu

@@ -8,14 +8,14 @@ const Footer = () => {
   return (
     <>
       <div className="flex items-center  justify-center">
-        <div className="flex items-center  gap-4 ">
+        <div className="flex items-center text-[#D0D6F9] hover:text-white  gap-4 ">
           <a
             rel="noreferrer"
             href="https://github.com/mosesfawole"
             target="_blank"
             className="flex items-center gap-4"
           >
-            <FaGithub className="" /> Github ↗
+            <FaGithub className="" /> Github
           </a>
           <a
             rel="noreferrer"
@@ -24,7 +24,7 @@ const Footer = () => {
             noreferrer="true"
             className="flex items-center gap-4"
           >
-            <FaTwitter className="" /> Twitter ↗
+            <FaTwitter className="text-[#D0D6F9] hover:text-white" /> Twitter
           </a>
           <a
             rel="noreferrer"
@@ -33,57 +33,8 @@ const Footer = () => {
             noreferrer="true"
             className=" flex items-center gap-4"
           >
-            <FaEnvelope className="" /> Email ↗
+            <FaEnvelope className="text-[#D0D6F9] hover:text-white" /> Email
           </a>
-        </div>
-      </div>
-
-      {/* mobile view */}
-      <div className="md:hidden">
-        <div className="">
-          <a
-            rel="noreferrer"
-            href="https://github.com/mosesfawole"
-            target="_blank"
-            className=" "
-          >
-            <FaGithub className="" />
-          </a>
-          <a
-            rel="noreferrer"
-            href="https://twitter.com/Pharwolehh"
-            target="_blank"
-            noreferrer="true"
-            className=""
-          >
-            <FaTwitter className="" />
-          </a>
-          <a
-            rel="noreferrer"
-            href="mailto:pharwoleh.dev@gmail.com"
-            target="_blank"
-            noreferrer="true"
-            className=" "
-          >
-            <FaEnvelope className="" />
-          </a>
-        </div>
-        <div className=" ">
-          <p className="">
-            Inspired by{" "}
-            <a
-              rel="noreferrer"
-              className=""
-              href="https://kadet.dev/"
-              target="_blank"
-            >
-              Kadet{""}
-              <span className="">
-                {" "}
-                <FaRegPaperPlane />
-              </span>
-            </a>
-          </p>
         </div>
       </div>
     </>
