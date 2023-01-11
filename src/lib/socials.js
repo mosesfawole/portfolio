@@ -1,12 +1,12 @@
 const socials = [
   {
     name: "Github",
-    href: "www.github.com/mosesfawole",
+    href: "https://www.github.com/mosesfawole",
     logo: "",
   },
   {
     name: "Twitter",
-    href: "www.twitter.com/pharwoleh",
+    href: "https://www.twitter.com/pharwoleh",
     logo: "",
   },
   {

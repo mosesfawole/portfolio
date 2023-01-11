@@ -18,7 +18,7 @@ const Footer = () => {
                   className=" flex items-center gap-4"
                 >
                   <img src={social.logo} />
-                  <p className="animate-pulse text-xl">{social.name}</p>
+                  <p className="text-base hover:animate-pulse">{social.name}</p>
                 </a>
               </li>
             ))}

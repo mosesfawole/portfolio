@@ -30,7 +30,7 @@ const Header = () => {
 
   return (
     // navbar
-    <div className="header  py-10">
+    <div className="header  ">
       {/* desktop view */}
       <div className="desktop md:flex justify-center items-center hidden">
         <div className="logo hidden  md:flex flex-1 px-6 text-3xl  text-white  font-barlow ">

@@ -18,7 +18,7 @@ function App() {
         className={
           currentPage === "none"
             ? ""
-            : "bg-mobile sm:bg-tablet md:bg-desktop bg-center bg-cover min-h-screen"
+            : "bg-mobile sm:bg-tablet md:bg-desktop bg-center bg-cover min-h-screen flex flex-col justify-around"
         }
       >
         {/* <Loader /> */}
