@@ -1,7 +1,7 @@
 import { FaEye, FaCodeBranch } from "react-icons/fa";
+import projects from "../lib/projects";
 import { motion } from "framer-motion";
-const Project = ({ details }) => {
-  const { title, description, github, live, technology } = details;
+const Project = () => {
   const containerVariants = {
     hidden: {
       opacity: 0,
@@ -26,34 +26,34 @@ const Project = ({ details }) => {
       animate="visible"
       className=""
     >
-      <div className="flex flex-col gap-4 justify-center items-center shadow-lg  h-[300px]">
-        <h3 className="text-xl  font-bold">{title}</h3>
-        <h4 className="">{technology}</h4>
-        <p className="">{description}</p>
-        <div className="flex justify-center items-center gap-4">
-          <span className="opacity-80 hover:opacity-100">
-            <a
-              title="Live preview"
-              className=""
-              href={live}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FaEye className="" /> Live
-            </a>
-          </span>
-          <span className="opacity-80 hover:opacity-100">
-            <a
-              title="Source code"
-              className=""
-              href={github}
-              target="_blank "
-              rel="noreferrer"
-            >
-              <FaCodeBranch className="opacity-80 hover:opacity-100" /> Source
-            </a>
-          </span>
-        </div>
+      <div className="text-white">
+        <ul>
+          {projects.map((item, index) => (
+            <li>
+              <p>{item.title}</p>
+              <p>{item.description}</p>
+              <div className="links">
+                <a
+                  href={item.live}
+                  rel="noreferrer"
+                  target="_blank"
+                  noreferrer="true"
+                >
+                  Live <FaEye className="text-white" />
+                </a>
+                <a
+                  href={item.github}
+                  rel="noreferrer"
+                  target="_blank"
+                  noreferrer="true"
+                >
+                  {" "}
+                  Source <FaCodeBranch className="text-white" />
+                </a>
+              </div>
+            </li>
+          ))}
+        </ul>
       </div>
     </motion.div>
   );
