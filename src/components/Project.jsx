@@ -26,29 +26,31 @@ const Project = () => {
       animate="visible"
       className=""
     >
-      <div className="text-white">
-        <ul>
+      <div className="text-white p-8">
+        <ul className="grid md:grid-cols-3 gap-8">
           {projects.map((item, index) => (
-            <li>
-              <p>{item.title}</p>
-              <p>{item.description}</p>
-              <div className="links">
+            <li key={index} className="shadow-lg">
+              <p className="font- font-bellefair text-3xl">{item.title}</p>
+              <p className="font-barlow text-base ">{item.description}</p>
+              <div className="links font-barlow text-sm flex  gap-4 ">
                 <a
+                  className="text-[#D0D6F9] hover:text-white "
                   href={item.live}
                   rel="noreferrer"
                   target="_blank"
                   noreferrer="true"
                 >
-                  Live <FaEye className="text-white" />
+                  Live
+                  {/* Live <FaEye className="text-white" /> */}
                 </a>
                 <a
+                  className="text-[#D0D6F9] hover:text-white"
                   href={item.github}
                   rel="noreferrer"
                   target="_blank"
                   noreferrer="true"
                 >
-                  {" "}
-                  Source <FaCodeBranch className="text-white" />
+                  Source {/* Source <FaCodeBranch className="text-white" /> */}
                 </a>
               </div>
             </li>
