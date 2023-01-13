@@ -22,12 +22,8 @@ const Info = () => {
     },
   };
   return (
-    <div className="">
+    <div className="text-white">
       <div className="">
-        <div className="">
-          <HeroText />
-          <Footer />
-        </div>
         <motion.div
           variants={containerVariants}
           initial="hidden"
