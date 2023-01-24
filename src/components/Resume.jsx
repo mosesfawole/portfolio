@@ -1,5 +1,5 @@
 import { FaDownload } from "react-icons/fa";
-import resume from "../file/resume.pdf";
+import resume from "../file/MosesFawole (3).pdf";
 const Resume = () => {
   return (
     <div className="  ">
